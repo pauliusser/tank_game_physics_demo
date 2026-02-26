@@ -1,0 +1,1370 @@
+{
+    "snapshots": [
+        {
+            "gameObjectName": "spider_leg_1_L_000",
+            "gameObjectPath": "/spider/spider_body/spider_leg_1_L_000",
+            "components": [
+                {
+                    "componentType": "MyIKSolver, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
+                    "componentTypeFullName": "MyIKSolver",
+                    "assemblyName": "Assembly-CSharp",
+                    "fieldValues": [
+                        {
+                            "fieldName": "debug",
+                            "value": "0",
+                            "fieldType": "Int32",
+                            "fieldTypeFullName": "System.Int32"
+                        },
+                        {
+                            "fieldName": "links",
+                            "value": "7",
+                            "fieldType": "Int32",
+                            "fieldTypeFullName": "System.Int32"
+                        },
+                        {
+                            "fieldName": "target",
+                            "value": "spider_target_L_001",
+                            "fieldType": "Transform",
+                            "fieldTypeFullName": "UnityEngine.Transform"
+                        },
+                        {
+                            "fieldName": "tolerance",
+                            "value": "0.01",
+                            "fieldType": "Single",
+                            "fieldTypeFullName": "System.Single"
+                        },
+                        {
+                            "fieldName": "posePreservation",
+                            "value": "0.932",
+                            "fieldType": "Single",
+                            "fieldTypeFullName": "System.Single"
+                        },
+                        {
+                            "fieldName": "startAlignedToTarget",
+                            "value": "False",
+                            "fieldType": "Boolean",
+                            "fieldTypeFullName": "System.Boolean"
+                        },
+                        {
+                            "fieldName": "iterationsPerFrame",
+                            "value": "10",
+                            "fieldType": "Int32",
+                            "fieldTypeFullName": "System.Int32"
+                        },
+                        {
+                            "fieldName": "drawDebugGizmos",
+                            "value": "False",
+                            "fieldType": "Boolean",
+                            "fieldTypeFullName": "System.Boolean"
+                        },
+                        {
+                            "fieldName": "chainColor",
+                            "value": "0,1,1,1",
+                            "fieldType": "Color",
+                            "fieldTypeFullName": "UnityEngine.Color"
+                        },
+                        {
+                            "fieldName": "boneLengthColor",
+                            "value": "1,0.9215686,0.01568628,1",
+                            "fieldType": "Color",
+                            "fieldTypeFullName": "UnityEngine.Color"
+                        }
+                    ],
+                    "propertyValues": []
+                },
+                {
+                    "componentType": "SpiderLegControls, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
+                    "componentTypeFullName": "SpiderLegControls",
+                    "assemblyName": "Assembly-CSharp",
+                    "fieldValues": [
+                        {
+                            "fieldName": "links",
+                            "value": "7",
+                            "fieldType": "Int32",
+                            "fieldTypeFullName": "System.Int32"
+                        },
+                        {
+                            "fieldName": "legIndex",
+                            "value": "4",
+                            "fieldType": "Int32",
+                            "fieldTypeFullName": "System.Int32"
+                        },
+                        {
+                            "fieldName": "legPairIndex",
+                            "value": "0",
+                            "fieldType": "Int32",
+                            "fieldTypeFullName": "System.Int32"
+                        },
+                        {
+                            "fieldName": "target",
+                            "value": "spider_target_L_001",
+                            "fieldType": "Transform",
+                            "fieldTypeFullName": "UnityEngine.Transform"
+                        },
+                        {
+                            "fieldName": "poseX",
+                            "value": "0.11",
+                            "fieldType": "Single",
+                            "fieldTypeFullName": "System.Single"
+                        },
+                        {
+                            "fieldName": "poseY",
+                            "value": "0.11",
+                            "fieldType": "Single",
+                            "fieldTypeFullName": "System.Single"
+                        },
+                        {
+                            "fieldName": "poseZ",
+                            "value": "0.1",
+                            "fieldType": "Single",
+                            "fieldTypeFullName": "System.Single"
+                        },
+                        {
+                            "fieldName": "localRootPosition",
+                            "value": "-0.07301233,-0.1063468,0.02112346",
+                            "fieldType": "Vector3",
+                            "fieldTypeFullName": "UnityEngine.Vector3"
+                        },
+                        {
+                            "fieldName": "endEffectorPosition",
+                            "value": "0.08410765,0.2063696,-0.5947765",
+                            "fieldType": "Vector3",
+                            "fieldTypeFullName": "UnityEngine.Vector3"
+                        }
+                    ],
+                    "propertyValues": []
+                },
+                {
+                    "componentType": "SpiderLegConstraints, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
+                    "componentTypeFullName": "SpiderLegConstraints",
+                    "assemblyName": "Assembly-CSharp",
+                    "fieldValues": [
+                        {
+                            "fieldName": "minXReachAngle",
+                            "value": "0",
+                            "fieldType": "Single",
+                            "fieldTypeFullName": "System.Single"
+                        },
+                        {
+                            "fieldName": "maxXReachAngle",
+                            "value": "0",
+                            "fieldType": "Single",
+                            "fieldTypeFullName": "System.Single"
+                        },
+                        {
+                            "fieldName": "minYReachAngle",
+                            "value": "2.630662",
+                            "fieldType": "Single",
+                            "fieldTypeFullName": "System.Single"
+                        },
+                        {
+                            "fieldName": "maxYReachAngle",
+                            "value": "0",
+                            "fieldType": "Single",
+                            "fieldTypeFullName": "System.Single"
+                        },
+                        {
+                            "fieldName": "minXRotAngle",
+                            "value": "12.79772",
+                            "fieldType": "Single",
+                            "fieldTypeFullName": "System.Single"
+                        },
+                        {
+                            "fieldName": "maxXRotAngle",
+                            "value": "-19.79905",
+                            "fieldType": "Single",
+                            "fieldTypeFullName": "System.Single"
+                        },
+                        {
+                            "fieldName": "minYRotAngle",
+                            "value": "-22",
+                            "fieldType": "Single",
+                            "fieldTypeFullName": "System.Single"
+                        },
+                        {
+                            "fieldName": "maxYRotAngle",
+                            "value": "15",
+                            "fieldType": "Single",
+                            "fieldTypeFullName": "System.Single"
+                        },
+                        {
+                            "fieldName": "minZRotAngle",
+                            "value": "-16",
+                            "fieldType": "Single",
+                            "fieldTypeFullName": "System.Single"
+                        },
+                        {
+                            "fieldName": "maxZRotAngle",
+                            "value": "25",
+                            "fieldType": "Single",
+                            "fieldTypeFullName": "System.Single"
+                        },
+                        {
+                            "fieldName": "stiffness",
+                            "value": "0.5",
+                            "fieldType": "Single",
+                            "fieldTypeFullName": "System.Single"
+                        },
+                        {
+                            "fieldName": "initialPose",
+                            "value": "16.99827,288.1984,0.2262219",
+                            "fieldType": "Vector3",
+                            "fieldTypeFullName": "UnityEngine.Vector3"
+                        },
+                        {
+                            "fieldName": "isRightSide",
+                            "value": "False",
+                            "fieldType": "Boolean",
+                            "fieldTypeFullName": "System.Boolean"
+                        }
+                    ],
+                    "propertyValues": []
+                }
+            ]
+        },
+        {
+            "gameObjectName": "spider_leg_1_L_001",
+            "gameObjectPath": "/spider/spider_body/spider_leg_1_L_000/spider_leg_1_L_001",
+            "components": [
+                {
+                    "componentType": "SpiderLegConstraints, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
+                    "componentTypeFullName": "SpiderLegConstraints",
+                    "assemblyName": "Assembly-CSharp",
+                    "fieldValues": [
+                        {
+                            "fieldName": "minXReachAngle",
+                            "value": "0",
+                            "fieldType": "Single",
+                            "fieldTypeFullName": "System.Single"
+                        },
+                        {
+                            "fieldName": "maxXReachAngle",
+                            "value": "0",
+                            "fieldType": "Single",
+                            "fieldTypeFullName": "System.Single"
+                        },
+                        {
+                            "fieldName": "minYReachAngle",
+                            "value": "0",
+                            "fieldType": "Single",
+                            "fieldTypeFullName": "System.Single"
+                        },
+                        {
+                            "fieldName": "maxYReachAngle",
+                            "value": "0",
+                            "fieldType": "Single",
+                            "fieldTypeFullName": "System.Single"
+                        },
+                        {
+                            "fieldName": "minXRotAngle",
+                            "value": "60.85737",
+                            "fieldType": "Single",
+                            "fieldTypeFullName": "System.Single"
+                        },
+                        {
+                            "fieldName": "maxXRotAngle",
+                            "value": "-10.26977",
+                            "fieldType": "Single",
+                            "fieldTypeFullName": "System.Single"
+                        },
+                        {
+                            "fieldName": "minYRotAngle",
+                            "value": "-22",
+                            "fieldType": "Single",
+                            "fieldTypeFullName": "System.Single"
+                        },
+                        {
+                            "fieldName": "maxYRotAngle",
+                            "value": "15",
+                            "fieldType": "Single",
+                            "fieldTypeFullName": "System.Single"
+                        },
+                        {
+                            "fieldName": "minZRotAngle",
+                            "value": "-16",
+                            "fieldType": "Single",
+                            "fieldTypeFullName": "System.Single"
+                        },
+                        {
+                            "fieldName": "maxZRotAngle",
+                            "value": "25",
+                            "fieldType": "Single",
+                            "fieldTypeFullName": "System.Single"
+                        },
+                        {
+                            "fieldName": "stiffness",
+                            "value": "0.5",
+                            "fieldType": "Single",
+                            "fieldTypeFullName": "System.Single"
+                        },
+                        {
+                            "fieldName": "initialPose",
+                            "value": "305.5482,54.12703,332.5125",
+                            "fieldType": "Vector3",
+                            "fieldTypeFullName": "UnityEngine.Vector3"
+                        },
+                        {
+                            "fieldName": "isRightSide",
+                            "value": "False",
+                            "fieldType": "Boolean",
+                            "fieldTypeFullName": "System.Boolean"
+                        }
+                    ],
+                    "propertyValues": []
+                }
+            ]
+        },
+        {
+            "gameObjectName": "spider_leg_1_L_002",
+            "gameObjectPath": "/spider/spider_body/spider_leg_1_L_000/spider_leg_1_L_001/spider_leg_1_L_002",
+            "components": [
+                {
+                    "componentType": "SpiderLegConstraints, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
+                    "componentTypeFullName": "SpiderLegConstraints",
+                    "assemblyName": "Assembly-CSharp",
+                    "fieldValues": [
+                        {
+                            "fieldName": "minXReachAngle",
+                            "value": "32.48034",
+                            "fieldType": "Single",
+                            "fieldTypeFullName": "System.Single"
+                        },
+                        {
+                            "fieldName": "maxXReachAngle",
+                            "value": "-75",
+                            "fieldType": "Single",
+                            "fieldTypeFullName": "System.Single"
+                        },
+                        {
+                            "fieldName": "minYReachAngle",
+                            "value": "34.23492",
+                            "fieldType": "Single",
+                            "fieldTypeFullName": "System.Single"
+                        },
+                        {
+                            "fieldName": "maxYReachAngle",
+                            "value": "0",
+                            "fieldType": "Single",
+                            "fieldTypeFullName": "System.Single"
+                        },
+                        {
+                            "fieldName": "minXRotAngle",
+                            "value": "0",
+                            "fieldType": "Single",
+                            "fieldTypeFullName": "System.Single"
+                        },
+                        {
+                            "fieldName": "maxXRotAngle",
+                            "value": "0",
+                            "fieldType": "Single",
+                            "fieldTypeFullName": "System.Single"
+                        },
+                        {
+                            "fieldName": "minYRotAngle",
+                            "value": "-22",
+                            "fieldType": "Single",
+                            "fieldTypeFullName": "System.Single"
+                        },
+                        {
+                            "fieldName": "maxYRotAngle",
+                            "value": "15",
+                            "fieldType": "Single",
+                            "fieldTypeFullName": "System.Single"
+                        },
+                        {
+                            "fieldName": "minZRotAngle",
+                            "value": "-16",
+                            "fieldType": "Single",
+                            "fieldTypeFullName": "System.Single"
+                        },
+                        {
+                            "fieldName": "maxZRotAngle",
+                            "value": "25",
+                            "fieldType": "Single",
+                            "fieldTypeFullName": "System.Single"
+                        },
+                        {
+                            "fieldName": "stiffness",
+                            "value": "0.5",
+                            "fieldType": "Single",
+                            "fieldTypeFullName": "System.Single"
+                        },
+                        {
+                            "fieldName": "initialPose",
+                            "value": "54.32434,51.4671,38.66999",
+                            "fieldType": "Vector3",
+                            "fieldTypeFullName": "UnityEngine.Vector3"
+                        },
+                        {
+                            "fieldName": "isRightSide",
+                            "value": "False",
+                            "fieldType": "Boolean",
+                            "fieldTypeFullName": "System.Boolean"
+                        }
+                    ],
+                    "propertyValues": []
+                }
+            ]
+        },
+        {
+            "gameObjectName": "spider_leg_1_L_003",
+            "gameObjectPath": "/spider/spider_body/spider_leg_1_L_000/spider_leg_1_L_001/spider_leg_1_L_002/spider_leg_1_L_003",
+            "components": [
+                {
+                    "componentType": "SpiderLegConstraints, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
+                    "componentTypeFullName": "SpiderLegConstraints",
+                    "assemblyName": "Assembly-CSharp",
+                    "fieldValues": [
+                        {
+                            "fieldName": "minXReachAngle",
+                            "value": "0",
+                            "fieldType": "Single",
+                            "fieldTypeFullName": "System.Single"
+                        },
+                        {
+                            "fieldName": "maxXReachAngle",
+                            "value": "-13.6032",
+                            "fieldType": "Single",
+                            "fieldTypeFullName": "System.Single"
+                        },
+                        {
+                            "fieldName": "minYReachAngle",
+                            "value": "0",
+                            "fieldType": "Single",
+                            "fieldTypeFullName": "System.Single"
+                        },
+                        {
+                            "fieldName": "maxYReachAngle",
+                            "value": "0",
+                            "fieldType": "Single",
+                            "fieldTypeFullName": "System.Single"
+                        },
+                        {
+                            "fieldName": "minXRotAngle",
+                            "value": "0",
+                            "fieldType": "Single",
+                            "fieldTypeFullName": "System.Single"
+                        },
+                        {
+                            "fieldName": "maxXRotAngle",
+                            "value": "0",
+                            "fieldType": "Single",
+                            "fieldTypeFullName": "System.Single"
+                        },
+                        {
+                            "fieldName": "minYRotAngle",
+                            "value": "0",
+                            "fieldType": "Single",
+                            "fieldTypeFullName": "System.Single"
+                        },
+                        {
+                            "fieldName": "maxYRotAngle",
+                            "value": "0",
+                            "fieldType": "Single",
+                            "fieldTypeFullName": "System.Single"
+                        },
+                        {
+                            "fieldName": "minZRotAngle",
+                            "value": "0",
+                            "fieldType": "Single",
+                            "fieldTypeFullName": "System.Single"
+                        },
+                        {
+                            "fieldName": "maxZRotAngle",
+                            "value": "0",
+                            "fieldType": "Single",
+                            "fieldTypeFullName": "System.Single"
+                        },
+                        {
+                            "fieldName": "stiffness",
+                            "value": "0.5",
+                            "fieldType": "Single",
+                            "fieldTypeFullName": "System.Single"
+                        },
+                        {
+                            "fieldName": "initialPose",
+                            "value": "44.25955,8.142767,356.5741",
+                            "fieldType": "Vector3",
+                            "fieldTypeFullName": "UnityEngine.Vector3"
+                        },
+                        {
+                            "fieldName": "isRightSide",
+                            "value": "False",
+                            "fieldType": "Boolean",
+                            "fieldTypeFullName": "System.Boolean"
+                        }
+                    ],
+                    "propertyValues": []
+                }
+            ]
+        },
+        {
+            "gameObjectName": "spider_leg_1_L_004",
+            "gameObjectPath": "/spider/spider_body/spider_leg_1_L_000/spider_leg_1_L_001/spider_leg_1_L_002/spider_leg_1_L_003/spider_leg_1_L_004",
+            "components": [
+                {
+                    "componentType": "SpiderLegConstraints, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
+                    "componentTypeFullName": "SpiderLegConstraints",
+                    "assemblyName": "Assembly-CSharp",
+                    "fieldValues": [
+                        {
+                            "fieldName": "minXReachAngle",
+                            "value": "28.11103",
+                            "fieldType": "Single",
+                            "fieldTypeFullName": "System.Single"
+                        },
+                        {
+                            "fieldName": "maxXReachAngle",
+                            "value": "-41",
+                            "fieldType": "Single",
+                            "fieldTypeFullName": "System.Single"
+                        },
+                        {
+                            "fieldName": "minYReachAngle",
+                            "value": "0",
+                            "fieldType": "Single",
+                            "fieldTypeFullName": "System.Single"
+                        },
+                        {
+                            "fieldName": "maxYReachAngle",
+                            "value": "0",
+                            "fieldType": "Single",
+                            "fieldTypeFullName": "System.Single"
+                        },
+                        {
+                            "fieldName": "minXRotAngle",
+                            "value": "0",
+                            "fieldType": "Single",
+                            "fieldTypeFullName": "System.Single"
+                        },
+                        {
+                            "fieldName": "maxXRotAngle",
+                            "value": "0",
+                            "fieldType": "Single",
+                            "fieldTypeFullName": "System.Single"
+                        },
+                        {
+                            "fieldName": "minYRotAngle",
+                            "value": "0",
+                            "fieldType": "Single",
+                            "fieldTypeFullName": "System.Single"
+                        },
+                        {
+                            "fieldName": "maxYRotAngle",
+                            "value": "0",
+                            "fieldType": "Single",
+                            "fieldTypeFullName": "System.Single"
+                        },
+                        {
+                            "fieldName": "minZRotAngle",
+                            "value": "0",
+                            "fieldType": "Single",
+                            "fieldTypeFullName": "System.Single"
+                        },
+                        {
+                            "fieldName": "maxZRotAngle",
+                            "value": "0",
+                            "fieldType": "Single",
+                            "fieldTypeFullName": "System.Single"
+                        },
+                        {
+                            "fieldName": "stiffness",
+                            "value": "0.5",
+                            "fieldType": "Single",
+                            "fieldTypeFullName": "System.Single"
+                        },
+                        {
+                            "fieldName": "initialPose",
+                            "value": "32.17889,18.47394,5.342896",
+                            "fieldType": "Vector3",
+                            "fieldTypeFullName": "UnityEngine.Vector3"
+                        },
+                        {
+                            "fieldName": "isRightSide",
+                            "value": "False",
+                            "fieldType": "Boolean",
+                            "fieldTypeFullName": "System.Boolean"
+                        }
+                    ],
+                    "propertyValues": []
+                }
+            ]
+        },
+        {
+            "gameObjectName": "spider_leg_1_L_005",
+            "gameObjectPath": "/spider/spider_body/spider_leg_1_L_000/spider_leg_1_L_001/spider_leg_1_L_002/spider_leg_1_L_003/spider_leg_1_L_004/spider_leg_1_L_005",
+            "components": [
+                {
+                    "componentType": "SpiderLegConstraints, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
+                    "componentTypeFullName": "SpiderLegConstraints",
+                    "assemblyName": "Assembly-CSharp",
+                    "fieldValues": [
+                        {
+                            "fieldName": "minXReachAngle",
+                            "value": "25.66484",
+                            "fieldType": "Single",
+                            "fieldTypeFullName": "System.Single"
+                        },
+                        {
+                            "fieldName": "maxXReachAngle",
+                            "value": "0",
+                            "fieldType": "Single",
+                            "fieldTypeFullName": "System.Single"
+                        },
+                        {
+                            "fieldName": "minYReachAngle",
+                            "value": "0",
+                            "fieldType": "Single",
+                            "fieldTypeFullName": "System.Single"
+                        },
+                        {
+                            "fieldName": "maxYReachAngle",
+                            "value": "0",
+                            "fieldType": "Single",
+                            "fieldTypeFullName": "System.Single"
+                        },
+                        {
+                            "fieldName": "minXRotAngle",
+                            "value": "0",
+                            "fieldType": "Single",
+                            "fieldTypeFullName": "System.Single"
+                        },
+                        {
+                            "fieldName": "maxXRotAngle",
+                            "value": "0",
+                            "fieldType": "Single",
+                            "fieldTypeFullName": "System.Single"
+                        },
+                        {
+                            "fieldName": "minYRotAngle",
+                            "value": "0",
+                            "fieldType": "Single",
+                            "fieldTypeFullName": "System.Single"
+                        },
+                        {
+                            "fieldName": "maxYRotAngle",
+                            "value": "0",
+                            "fieldType": "Single",
+                            "fieldTypeFullName": "System.Single"
+                        },
+                        {
+                            "fieldName": "minZRotAngle",
+                            "value": "0",
+                            "fieldType": "Single",
+                            "fieldTypeFullName": "System.Single"
+                        },
+                        {
+                            "fieldName": "maxZRotAngle",
+                            "value": "0",
+                            "fieldType": "Single",
+                            "fieldTypeFullName": "System.Single"
+                        },
+                        {
+                            "fieldName": "stiffness",
+                            "value": "0.5",
+                            "fieldType": "Single",
+                            "fieldTypeFullName": "System.Single"
+                        },
+                        {
+                            "fieldName": "initialPose",
+                            "value": "356.7719,355.2995,7.701346",
+                            "fieldType": "Vector3",
+                            "fieldTypeFullName": "UnityEngine.Vector3"
+                        },
+                        {
+                            "fieldName": "isRightSide",
+                            "value": "False",
+                            "fieldType": "Boolean",
+                            "fieldTypeFullName": "System.Boolean"
+                        }
+                    ],
+                    "propertyValues": []
+                }
+            ]
+        },
+        {
+            "gameObjectName": "spider_leg_1_R_000",
+            "gameObjectPath": "/spider/spider_body/spider_leg_1_R_000",
+            "components": [
+                {
+                    "componentType": "MyIKSolver, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
+                    "componentTypeFullName": "MyIKSolver",
+                    "assemblyName": "Assembly-CSharp",
+                    "fieldValues": [
+                        {
+                            "fieldName": "debug",
+                            "value": "0",
+                            "fieldType": "Int32",
+                            "fieldTypeFullName": "System.Int32"
+                        },
+                        {
+                            "fieldName": "links",
+                            "value": "7",
+                            "fieldType": "Int32",
+                            "fieldTypeFullName": "System.Int32"
+                        },
+                        {
+                            "fieldName": "target",
+                            "value": "spider_target_R_001",
+                            "fieldType": "Transform",
+                            "fieldTypeFullName": "UnityEngine.Transform"
+                        },
+                        {
+                            "fieldName": "tolerance",
+                            "value": "0.01",
+                            "fieldType": "Single",
+                            "fieldTypeFullName": "System.Single"
+                        },
+                        {
+                            "fieldName": "posePreservation",
+                            "value": "0.932",
+                            "fieldType": "Single",
+                            "fieldTypeFullName": "System.Single"
+                        },
+                        {
+                            "fieldName": "startAlignedToTarget",
+                            "value": "False",
+                            "fieldType": "Boolean",
+                            "fieldTypeFullName": "System.Boolean"
+                        },
+                        {
+                            "fieldName": "iterationsPerFrame",
+                            "value": "10",
+                            "fieldType": "Int32",
+                            "fieldTypeFullName": "System.Int32"
+                        },
+                        {
+                            "fieldName": "drawDebugGizmos",
+                            "value": "False",
+                            "fieldType": "Boolean",
+                            "fieldTypeFullName": "System.Boolean"
+                        },
+                        {
+                            "fieldName": "chainColor",
+                            "value": "0,1,1,1",
+                            "fieldType": "Color",
+                            "fieldTypeFullName": "UnityEngine.Color"
+                        },
+                        {
+                            "fieldName": "boneLengthColor",
+                            "value": "1,0.9215686,0.01568628,1",
+                            "fieldType": "Color",
+                            "fieldTypeFullName": "UnityEngine.Color"
+                        }
+                    ],
+                    "propertyValues": []
+                },
+                {
+                    "componentType": "SpiderLegControls, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
+                    "componentTypeFullName": "SpiderLegControls",
+                    "assemblyName": "Assembly-CSharp",
+                    "fieldValues": [
+                        {
+                            "fieldName": "links",
+                            "value": "7",
+                            "fieldType": "Int32",
+                            "fieldTypeFullName": "System.Int32"
+                        },
+                        {
+                            "fieldName": "legIndex",
+                            "value": "0",
+                            "fieldType": "Int32",
+                            "fieldTypeFullName": "System.Int32"
+                        },
+                        {
+                            "fieldName": "legPairIndex",
+                            "value": "0",
+                            "fieldType": "Int32",
+                            "fieldTypeFullName": "System.Int32"
+                        },
+                        {
+                            "fieldName": "target",
+                            "value": "spider_target_R_001",
+                            "fieldType": "Transform",
+                            "fieldTypeFullName": "UnityEngine.Transform"
+                        },
+                        {
+                            "fieldName": "poseX",
+                            "value": "0.11",
+                            "fieldType": "Single",
+                            "fieldTypeFullName": "System.Single"
+                        },
+                        {
+                            "fieldName": "poseY",
+                            "value": "0.11",
+                            "fieldType": "Single",
+                            "fieldTypeFullName": "System.Single"
+                        },
+                        {
+                            "fieldName": "poseZ",
+                            "value": "0.1",
+                            "fieldType": "Single",
+                            "fieldTypeFullName": "System.Single"
+                        },
+                        {
+                            "fieldName": "localRootPosition",
+                            "value": "0.07301232,-0.1063467,0.02112348",
+                            "fieldType": "Vector3",
+                            "fieldTypeFullName": "UnityEngine.Vector3"
+                        },
+                        {
+                            "fieldName": "endEffectorPosition",
+                            "value": "-0.1421066,0.2063692,-0.5947763",
+                            "fieldType": "Vector3",
+                            "fieldTypeFullName": "UnityEngine.Vector3"
+                        }
+                    ],
+                    "propertyValues": []
+                },
+                {
+                    "componentType": "SpiderLegConstraints, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
+                    "componentTypeFullName": "SpiderLegConstraints",
+                    "assemblyName": "Assembly-CSharp",
+                    "fieldValues": [
+                        {
+                            "fieldName": "minXReachAngle",
+                            "value": "0",
+                            "fieldType": "Single",
+                            "fieldTypeFullName": "System.Single"
+                        },
+                        {
+                            "fieldName": "maxXReachAngle",
+                            "value": "0",
+                            "fieldType": "Single",
+                            "fieldTypeFullName": "System.Single"
+                        },
+                        {
+                            "fieldName": "minYReachAngle",
+                            "value": "2.630662",
+                            "fieldType": "Single",
+                            "fieldTypeFullName": "System.Single"
+                        },
+                        {
+                            "fieldName": "maxYReachAngle",
+                            "value": "0",
+                            "fieldType": "Single",
+                            "fieldTypeFullName": "System.Single"
+                        },
+                        {
+                            "fieldName": "minXRotAngle",
+                            "value": "12.79772",
+                            "fieldType": "Single",
+                            "fieldTypeFullName": "System.Single"
+                        },
+                        {
+                            "fieldName": "maxXRotAngle",
+                            "value": "-19.79905",
+                            "fieldType": "Single",
+                            "fieldTypeFullName": "System.Single"
+                        },
+                        {
+                            "fieldName": "minYRotAngle",
+                            "value": "-22",
+                            "fieldType": "Single",
+                            "fieldTypeFullName": "System.Single"
+                        },
+                        {
+                            "fieldName": "maxYRotAngle",
+                            "value": "15",
+                            "fieldType": "Single",
+                            "fieldTypeFullName": "System.Single"
+                        },
+                        {
+                            "fieldName": "minZRotAngle",
+                            "value": "-16",
+                            "fieldType": "Single",
+                            "fieldTypeFullName": "System.Single"
+                        },
+                        {
+                            "fieldName": "maxZRotAngle",
+                            "value": "25",
+                            "fieldType": "Single",
+                            "fieldTypeFullName": "System.Single"
+                        },
+                        {
+                            "fieldName": "stiffness",
+                            "value": "0.5",
+                            "fieldType": "Single",
+                            "fieldTypeFullName": "System.Single"
+                        },
+                        {
+                            "fieldName": "initialPose",
+                            "value": "16.99826,71.80152,359.7738",
+                            "fieldType": "Vector3",
+                            "fieldTypeFullName": "UnityEngine.Vector3"
+                        },
+                        {
+                            "fieldName": "isRightSide",
+                            "value": "True",
+                            "fieldType": "Boolean",
+                            "fieldTypeFullName": "System.Boolean"
+                        }
+                    ],
+                    "propertyValues": []
+                }
+            ]
+        },
+        {
+            "gameObjectName": "spider_leg_1_R_001",
+            "gameObjectPath": "/spider/spider_body/spider_leg_1_R_000/spider_leg_1_R_001",
+            "components": [
+                {
+                    "componentType": "SpiderLegConstraints, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
+                    "componentTypeFullName": "SpiderLegConstraints",
+                    "assemblyName": "Assembly-CSharp",
+                    "fieldValues": [
+                        {
+                            "fieldName": "minXReachAngle",
+                            "value": "0",
+                            "fieldType": "Single",
+                            "fieldTypeFullName": "System.Single"
+                        },
+                        {
+                            "fieldName": "maxXReachAngle",
+                            "value": "0",
+                            "fieldType": "Single",
+                            "fieldTypeFullName": "System.Single"
+                        },
+                        {
+                            "fieldName": "minYReachAngle",
+                            "value": "0",
+                            "fieldType": "Single",
+                            "fieldTypeFullName": "System.Single"
+                        },
+                        {
+                            "fieldName": "maxYReachAngle",
+                            "value": "0",
+                            "fieldType": "Single",
+                            "fieldTypeFullName": "System.Single"
+                        },
+                        {
+                            "fieldName": "minXRotAngle",
+                            "value": "60.85737",
+                            "fieldType": "Single",
+                            "fieldTypeFullName": "System.Single"
+                        },
+                        {
+                            "fieldName": "maxXRotAngle",
+                            "value": "-10.26977",
+                            "fieldType": "Single",
+                            "fieldTypeFullName": "System.Single"
+                        },
+                        {
+                            "fieldName": "minYRotAngle",
+                            "value": "-22",
+                            "fieldType": "Single",
+                            "fieldTypeFullName": "System.Single"
+                        },
+                        {
+                            "fieldName": "maxYRotAngle",
+                            "value": "15",
+                            "fieldType": "Single",
+                            "fieldTypeFullName": "System.Single"
+                        },
+                        {
+                            "fieldName": "minZRotAngle",
+                            "value": "-16",
+                            "fieldType": "Single",
+                            "fieldTypeFullName": "System.Single"
+                        },
+                        {
+                            "fieldName": "maxZRotAngle",
+                            "value": "25",
+                            "fieldType": "Single",
+                            "fieldTypeFullName": "System.Single"
+                        },
+                        {
+                            "fieldName": "stiffness",
+                            "value": "0.5",
+                            "fieldType": "Single",
+                            "fieldTypeFullName": "System.Single"
+                        },
+                        {
+                            "fieldName": "initialPose",
+                            "value": "305.5482,305.873,27.4875",
+                            "fieldType": "Vector3",
+                            "fieldTypeFullName": "UnityEngine.Vector3"
+                        },
+                        {
+                            "fieldName": "isRightSide",
+                            "value": "True",
+                            "fieldType": "Boolean",
+                            "fieldTypeFullName": "System.Boolean"
+                        }
+                    ],
+                    "propertyValues": []
+                }
+            ]
+        },
+        {
+            "gameObjectName": "spider_leg_1_R_002",
+            "gameObjectPath": "/spider/spider_body/spider_leg_1_R_000/spider_leg_1_R_001/spider_leg_1_R_002",
+            "components": [
+                {
+                    "componentType": "SpiderLegConstraints, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
+                    "componentTypeFullName": "SpiderLegConstraints",
+                    "assemblyName": "Assembly-CSharp",
+                    "fieldValues": [
+                        {
+                            "fieldName": "minXReachAngle",
+                            "value": "32.48034",
+                            "fieldType": "Single",
+                            "fieldTypeFullName": "System.Single"
+                        },
+                        {
+                            "fieldName": "maxXReachAngle",
+                            "value": "-75",
+                            "fieldType": "Single",
+                            "fieldTypeFullName": "System.Single"
+                        },
+                        {
+                            "fieldName": "minYReachAngle",
+                            "value": "34.23492",
+                            "fieldType": "Single",
+                            "fieldTypeFullName": "System.Single"
+                        },
+                        {
+                            "fieldName": "maxYReachAngle",
+                            "value": "0",
+                            "fieldType": "Single",
+                            "fieldTypeFullName": "System.Single"
+                        },
+                        {
+                            "fieldName": "minXRotAngle",
+                            "value": "0",
+                            "fieldType": "Single",
+                            "fieldTypeFullName": "System.Single"
+                        },
+                        {
+                            "fieldName": "maxXRotAngle",
+                            "value": "0",
+                            "fieldType": "Single",
+                            "fieldTypeFullName": "System.Single"
+                        },
+                        {
+                            "fieldName": "minYRotAngle",
+                            "value": "-22",
+                            "fieldType": "Single",
+                            "fieldTypeFullName": "System.Single"
+                        },
+                        {
+                            "fieldName": "maxYRotAngle",
+                            "value": "15",
+                            "fieldType": "Single",
+                            "fieldTypeFullName": "System.Single"
+                        },
+                        {
+                            "fieldName": "minZRotAngle",
+                            "value": "-16",
+                            "fieldType": "Single",
+                            "fieldTypeFullName": "System.Single"
+                        },
+                        {
+                            "fieldName": "maxZRotAngle",
+                            "value": "25",
+                            "fieldType": "Single",
+                            "fieldTypeFullName": "System.Single"
+                        },
+                        {
+                            "fieldName": "stiffness",
+                            "value": "0.5",
+                            "fieldType": "Single",
+                            "fieldTypeFullName": "System.Single"
+                        },
+                        {
+                            "fieldName": "initialPose",
+                            "value": "54.32435,308.5329,321.33",
+                            "fieldType": "Vector3",
+                            "fieldTypeFullName": "UnityEngine.Vector3"
+                        },
+                        {
+                            "fieldName": "isRightSide",
+                            "value": "True",
+                            "fieldType": "Boolean",
+                            "fieldTypeFullName": "System.Boolean"
+                        }
+                    ],
+                    "propertyValues": []
+                }
+            ]
+        },
+        {
+            "gameObjectName": "spider_leg_1_R_003",
+            "gameObjectPath": "/spider/spider_body/spider_leg_1_R_000/spider_leg_1_R_001/spider_leg_1_R_002/spider_leg_1_R_003",
+            "components": [
+                {
+                    "componentType": "SpiderLegConstraints, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
+                    "componentTypeFullName": "SpiderLegConstraints",
+                    "assemblyName": "Assembly-CSharp",
+                    "fieldValues": [
+                        {
+                            "fieldName": "minXReachAngle",
+                            "value": "0",
+                            "fieldType": "Single",
+                            "fieldTypeFullName": "System.Single"
+                        },
+                        {
+                            "fieldName": "maxXReachAngle",
+                            "value": "-13.6032",
+                            "fieldType": "Single",
+                            "fieldTypeFullName": "System.Single"
+                        },
+                        {
+                            "fieldName": "minYReachAngle",
+                            "value": "0",
+                            "fieldType": "Single",
+                            "fieldTypeFullName": "System.Single"
+                        },
+                        {
+                            "fieldName": "maxYReachAngle",
+                            "value": "0",
+                            "fieldType": "Single",
+                            "fieldTypeFullName": "System.Single"
+                        },
+                        {
+                            "fieldName": "minXRotAngle",
+                            "value": "0",
+                            "fieldType": "Single",
+                            "fieldTypeFullName": "System.Single"
+                        },
+                        {
+                            "fieldName": "maxXRotAngle",
+                            "value": "0",
+                            "fieldType": "Single",
+                            "fieldTypeFullName": "System.Single"
+                        },
+                        {
+                            "fieldName": "minYRotAngle",
+                            "value": "0",
+                            "fieldType": "Single",
+                            "fieldTypeFullName": "System.Single"
+                        },
+                        {
+                            "fieldName": "maxYRotAngle",
+                            "value": "0",
+                            "fieldType": "Single",
+                            "fieldTypeFullName": "System.Single"
+                        },
+                        {
+                            "fieldName": "minZRotAngle",
+                            "value": "0",
+                            "fieldType": "Single",
+                            "fieldTypeFullName": "System.Single"
+                        },
+                        {
+                            "fieldName": "maxZRotAngle",
+                            "value": "0",
+                            "fieldType": "Single",
+                            "fieldTypeFullName": "System.Single"
+                        },
+                        {
+                            "fieldName": "stiffness",
+                            "value": "0.5",
+                            "fieldType": "Single",
+                            "fieldTypeFullName": "System.Single"
+                        },
+                        {
+                            "fieldName": "initialPose",
+                            "value": "44.25956,351.8572,3.425863",
+                            "fieldType": "Vector3",
+                            "fieldTypeFullName": "UnityEngine.Vector3"
+                        },
+                        {
+                            "fieldName": "isRightSide",
+                            "value": "True",
+                            "fieldType": "Boolean",
+                            "fieldTypeFullName": "System.Boolean"
+                        }
+                    ],
+                    "propertyValues": []
+                }
+            ]
+        },
+        {
+            "gameObjectName": "spider_leg_1_R_004",
+            "gameObjectPath": "/spider/spider_body/spider_leg_1_R_000/spider_leg_1_R_001/spider_leg_1_R_002/spider_leg_1_R_003/spider_leg_1_R_004",
+            "components": [
+                {
+                    "componentType": "SpiderLegConstraints, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
+                    "componentTypeFullName": "SpiderLegConstraints",
+                    "assemblyName": "Assembly-CSharp",
+                    "fieldValues": [
+                        {
+                            "fieldName": "minXReachAngle",
+                            "value": "28.11103",
+                            "fieldType": "Single",
+                            "fieldTypeFullName": "System.Single"
+                        },
+                        {
+                            "fieldName": "maxXReachAngle",
+                            "value": "-41",
+                            "fieldType": "Single",
+                            "fieldTypeFullName": "System.Single"
+                        },
+                        {
+                            "fieldName": "minYReachAngle",
+                            "value": "0",
+                            "fieldType": "Single",
+                            "fieldTypeFullName": "System.Single"
+                        },
+                        {
+                            "fieldName": "maxYReachAngle",
+                            "value": "0",
+                            "fieldType": "Single",
+                            "fieldTypeFullName": "System.Single"
+                        },
+                        {
+                            "fieldName": "minXRotAngle",
+                            "value": "0",
+                            "fieldType": "Single",
+                            "fieldTypeFullName": "System.Single"
+                        },
+                        {
+                            "fieldName": "maxXRotAngle",
+                            "value": "0",
+                            "fieldType": "Single",
+                            "fieldTypeFullName": "System.Single"
+                        },
+                        {
+                            "fieldName": "minYRotAngle",
+                            "value": "0",
+                            "fieldType": "Single",
+                            "fieldTypeFullName": "System.Single"
+                        },
+                        {
+                            "fieldName": "maxYRotAngle",
+                            "value": "0",
+                            "fieldType": "Single",
+                            "fieldTypeFullName": "System.Single"
+                        },
+                        {
+                            "fieldName": "minZRotAngle",
+                            "value": "0",
+                            "fieldType": "Single",
+                            "fieldTypeFullName": "System.Single"
+                        },
+                        {
+                            "fieldName": "maxZRotAngle",
+                            "value": "0",
+                            "fieldType": "Single",
+                            "fieldTypeFullName": "System.Single"
+                        },
+                        {
+                            "fieldName": "stiffness",
+                            "value": "0.5",
+                            "fieldType": "Single",
+                            "fieldTypeFullName": "System.Single"
+                        },
+                        {
+                            "fieldName": "initialPose",
+                            "value": "32.17885,341.5261,354.657",
+                            "fieldType": "Vector3",
+                            "fieldTypeFullName": "UnityEngine.Vector3"
+                        },
+                        {
+                            "fieldName": "isRightSide",
+                            "value": "True",
+                            "fieldType": "Boolean",
+                            "fieldTypeFullName": "System.Boolean"
+                        }
+                    ],
+                    "propertyValues": []
+                }
+            ]
+        },
+        {
+            "gameObjectName": "spider_leg_1_R_005",
+            "gameObjectPath": "/spider/spider_body/spider_leg_1_R_000/spider_leg_1_R_001/spider_leg_1_R_002/spider_leg_1_R_003/spider_leg_1_R_004/spider_leg_1_R_005",
+            "components": [
+                {
+                    "componentType": "SpiderLegConstraints, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
+                    "componentTypeFullName": "SpiderLegConstraints",
+                    "assemblyName": "Assembly-CSharp",
+                    "fieldValues": [
+                        {
+                            "fieldName": "minXReachAngle",
+                            "value": "25.66484",
+                            "fieldType": "Single",
+                            "fieldTypeFullName": "System.Single"
+                        },
+                        {
+                            "fieldName": "maxXReachAngle",
+                            "value": "0",
+                            "fieldType": "Single",
+                            "fieldTypeFullName": "System.Single"
+                        },
+                        {
+                            "fieldName": "minYReachAngle",
+                            "value": "0",
+                            "fieldType": "Single",
+                            "fieldTypeFullName": "System.Single"
+                        },
+                        {
+                            "fieldName": "maxYReachAngle",
+                            "value": "0",
+                            "fieldType": "Single",
+                            "fieldTypeFullName": "System.Single"
+                        },
+                        {
+                            "fieldName": "minXRotAngle",
+                            "value": "0",
+                            "fieldType": "Single",
+                            "fieldTypeFullName": "System.Single"
+                        },
+                        {
+                            "fieldName": "maxXRotAngle",
+                            "value": "0",
+                            "fieldType": "Single",
+                            "fieldTypeFullName": "System.Single"
+                        },
+                        {
+                            "fieldName": "minYRotAngle",
+                            "value": "0",
+                            "fieldType": "Single",
+                            "fieldTypeFullName": "System.Single"
+                        },
+                        {
+                            "fieldName": "maxYRotAngle",
+                            "value": "0",
+                            "fieldType": "Single",
+                            "fieldTypeFullName": "System.Single"
+                        },
+                        {
+                            "fieldName": "minZRotAngle",
+                            "value": "0",
+                            "fieldType": "Single",
+                            "fieldTypeFullName": "System.Single"
+                        },
+                        {
+                            "fieldName": "maxZRotAngle",
+                            "value": "0",
+                            "fieldType": "Single",
+                            "fieldTypeFullName": "System.Single"
+                        },
+                        {
+                            "fieldName": "stiffness",
+                            "value": "0.5",
+                            "fieldType": "Single",
+                            "fieldTypeFullName": "System.Single"
+                        },
+                        {
+                            "fieldName": "initialPose",
+                            "value": "356.772,4.700423,352.2987",
+                            "fieldType": "Vector3",
+                            "fieldTypeFullName": "UnityEngine.Vector3"
+                        },
+                        {
+                            "fieldName": "isRightSide",
+                            "value": "True",
+                            "fieldType": "Boolean",
+                            "fieldTypeFullName": "System.Boolean"
+                        }
+                    ],
+                    "propertyValues": []
+                }
+            ]
+        }
+    ],
+    "timestamp": "2026-02-12 15:36:00",
+    "sceneName": "SampleScene"
+}

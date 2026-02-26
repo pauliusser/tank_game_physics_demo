@@ -1,0 +1,98 @@
+{
+    "snapshots": [
+        {
+            "gameObjectName": "spider_leg_3_R_001",
+            "gameObjectPath": "/spider/spider_body/spider_leg_3_R_000/spider_leg_3_R_001",
+            "components": [
+                {
+                    "componentType": "SpiderLegConstraints, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
+                    "componentTypeFullName": "SpiderLegConstraints",
+                    "assemblyName": "Assembly-CSharp",
+                    "fieldValues": [
+                        {
+                            "fieldName": "minXReachAngle",
+                            "value": "62",
+                            "fieldType": "Single",
+                            "fieldTypeFullName": "System.Single"
+                        },
+                        {
+                            "fieldName": "maxXReachAngle",
+                            "value": "37",
+                            "fieldType": "Single",
+                            "fieldTypeFullName": "System.Single"
+                        },
+                        {
+                            "fieldName": "minYReachAngle",
+                            "value": "-9",
+                            "fieldType": "Single",
+                            "fieldTypeFullName": "System.Single"
+                        },
+                        {
+                            "fieldName": "maxYReachAngle",
+                            "value": "15",
+                            "fieldType": "Single",
+                            "fieldTypeFullName": "System.Single"
+                        },
+                        {
+                            "fieldName": "minXRotAngle",
+                            "value": "97",
+                            "fieldType": "Single",
+                            "fieldTypeFullName": "System.Single"
+                        },
+                        {
+                            "fieldName": "maxXRotAngle",
+                            "value": "-65",
+                            "fieldType": "Single",
+                            "fieldTypeFullName": "System.Single"
+                        },
+                        {
+                            "fieldName": "minYRotAngle",
+                            "value": "0",
+                            "fieldType": "Single",
+                            "fieldTypeFullName": "System.Single"
+                        },
+                        {
+                            "fieldName": "maxYRotAngle",
+                            "value": "0",
+                            "fieldType": "Single",
+                            "fieldTypeFullName": "System.Single"
+                        },
+                        {
+                            "fieldName": "minZRotAngle",
+                            "value": "0",
+                            "fieldType": "Single",
+                            "fieldTypeFullName": "System.Single"
+                        },
+                        {
+                            "fieldName": "maxZRotAngle",
+                            "value": "0",
+                            "fieldType": "Single",
+                            "fieldTypeFullName": "System.Single"
+                        },
+                        {
+                            "fieldName": "stiffness",
+                            "value": "0.5",
+                            "fieldType": "Single",
+                            "fieldTypeFullName": "System.Single"
+                        },
+                        {
+                            "fieldName": "initialPose",
+                            "value": "293.8159,9.530439,344.5231",
+                            "fieldType": "Vector3",
+                            "fieldTypeFullName": "UnityEngine.Vector3"
+                        },
+                        {
+                            "fieldName": "isRightSide",
+                            "value": "True",
+                            "fieldType": "Boolean",
+                            "fieldTypeFullName": "System.Boolean"
+                        }
+                    ],
+                    "propertyValues": []
+                }
+            ]
+        }
+    ],
+    "timestamp": "2026-02-10 02:16:56",
+    "sceneName": "SampleScene"
+}

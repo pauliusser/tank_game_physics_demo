@@ -1,0 +1,140 @@
+{
+    "sets": [
+        {
+            "setName": "leg_joints",
+            "objectPaths": [
+                "/spider/spider_body/spider_leg_1_L_000",
+                "/spider/spider_body/spider_leg_1_L_000/spider_leg_1_L_001",
+                "/spider/spider_body/spider_leg_1_L_000/spider_leg_1_L_001/spider_leg_1_L_002",
+                "/spider/spider_body/spider_leg_1_L_000/spider_leg_1_L_001/spider_leg_1_L_002/spider_leg_1_L_003",
+                "/spider/spider_body/spider_leg_1_L_000/spider_leg_1_L_001/spider_leg_1_L_002/spider_leg_1_L_003/spider_leg_1_L_004",
+                "/spider/spider_body/spider_leg_1_L_000/spider_leg_1_L_001/spider_leg_1_L_002/spider_leg_1_L_003/spider_leg_1_L_004/spider_leg_1_L_005",
+                "/spider/spider_body/spider_leg_1_R_000",
+                "/spider/spider_body/spider_leg_1_R_000/spider_leg_1_R_001",
+                "/spider/spider_body/spider_leg_1_R_000/spider_leg_1_R_001/spider_leg_1_R_002",
+                "/spider/spider_body/spider_leg_1_R_000/spider_leg_1_R_001/spider_leg_1_R_002/spider_leg_1_R_003",
+                "/spider/spider_body/spider_leg_1_R_000/spider_leg_1_R_001/spider_leg_1_R_002/spider_leg_1_R_003/spider_leg_1_R_004",
+                "/spider/spider_body/spider_leg_1_R_000/spider_leg_1_R_001/spider_leg_1_R_002/spider_leg_1_R_003/spider_leg_1_R_004/spider_leg_1_R_005",
+                "/spider/spider_body/spider_leg_2_L_000",
+                "/spider/spider_body/spider_leg_2_L_000/spider_leg_2_L_001",
+                "/spider/spider_body/spider_leg_2_L_000/spider_leg_2_L_001/spider_leg_2_L_002",
+                "/spider/spider_body/spider_leg_2_L_000/spider_leg_2_L_001/spider_leg_2_L_002/spider_leg_2_L_003",
+                "/spider/spider_body/spider_leg_2_L_000/spider_leg_2_L_001/spider_leg_2_L_002/spider_leg_2_L_003/spider_leg_2_L_004",
+                "/spider/spider_body/spider_leg_2_L_000/spider_leg_2_L_001/spider_leg_2_L_002/spider_leg_2_L_003/spider_leg_2_L_004/spider_leg_2_L_005",
+                "/spider/spider_body/spider_leg_2_R_000",
+                "/spider/spider_body/spider_leg_2_R_000/spider_leg_2_R_001",
+                "/spider/spider_body/spider_leg_2_R_000/spider_leg_2_R_001/spider_leg_2_R_002",
+                "/spider/spider_body/spider_leg_2_R_000/spider_leg_2_R_001/spider_leg_2_R_002/spider_leg_2_R_003",
+                "/spider/spider_body/spider_leg_2_R_000/spider_leg_2_R_001/spider_leg_2_R_002/spider_leg_2_R_003/spider_leg_2_R_004",
+                "/spider/spider_body/spider_leg_2_R_000/spider_leg_2_R_001/spider_leg_2_R_002/spider_leg_2_R_003/spider_leg_2_R_004/spider_leg_2_R_005",
+                "/spider/spider_body/spider_leg_3_L_000",
+                "/spider/spider_body/spider_leg_3_L_000/spider_leg_3_L_001",
+                "/spider/spider_body/spider_leg_3_L_000/spider_leg_3_L_001/spider_leg_3_L_002",
+                "/spider/spider_body/spider_leg_3_L_000/spider_leg_3_L_001/spider_leg_3_L_002/spider_leg_3_L_003",
+                "/spider/spider_body/spider_leg_3_L_000/spider_leg_3_L_001/spider_leg_3_L_002/spider_leg_3_L_003/spider_leg_3_L_004",
+                "/spider/spider_body/spider_leg_3_L_000/spider_leg_3_L_001/spider_leg_3_L_002/spider_leg_3_L_003/spider_leg_3_L_004/spider_leg_3_L_005",
+                "/spider/spider_body/spider_leg_3_R_000",
+                "/spider/spider_body/spider_leg_3_R_000/spider_leg_3_R_001",
+                "/spider/spider_body/spider_leg_3_R_000/spider_leg_3_R_001/spider_leg_3_R_002",
+                "/spider/spider_body/spider_leg_3_R_000/spider_leg_3_R_001/spider_leg_3_R_002/spider_leg_3_R_003",
+                "/spider/spider_body/spider_leg_3_R_000/spider_leg_3_R_001/spider_leg_3_R_002/spider_leg_3_R_003/spider_leg_3_R_004",
+                "/spider/spider_body/spider_leg_3_R_000/spider_leg_3_R_001/spider_leg_3_R_002/spider_leg_3_R_003/spider_leg_3_R_004/spider_leg_3_R_005",
+                "/spider/spider_body/spider_leg_4_L_000",
+                "/spider/spider_body/spider_leg_4_L_000/spider_leg_4_L_001",
+                "/spider/spider_body/spider_leg_4_L_000/spider_leg_4_L_001/spider_leg_4_L_002",
+                "/spider/spider_body/spider_leg_4_L_000/spider_leg_4_L_001/spider_leg_4_L_002/spider_leg_4_L_003",
+                "/spider/spider_body/spider_leg_4_L_000/spider_leg_4_L_001/spider_leg_4_L_002/spider_leg_4_L_003/spider_leg_4_L_004",
+                "/spider/spider_body/spider_leg_4_L_000/spider_leg_4_L_001/spider_leg_4_L_002/spider_leg_4_L_003/spider_leg_4_L_004/spider_leg_4_L_005",
+                "/spider/spider_body/spider_leg_4_R_000",
+                "/spider/spider_body/spider_leg_4_R_000/spider_leg_4_R_001",
+                "/spider/spider_body/spider_leg_4_R_000/spider_leg_4_R_001/spider_leg_4_R_002",
+                "/spider/spider_body/spider_leg_4_R_000/spider_leg_4_R_001/spider_leg_4_R_002/spider_leg_4_R_003",
+                "/spider/spider_body/spider_leg_4_R_000/spider_leg_4_R_001/spider_leg_4_R_002/spider_leg_4_R_003/spider_leg_4_R_004",
+                "/spider/spider_body/spider_leg_4_R_000/spider_leg_4_R_001/spider_leg_4_R_002/spider_leg_4_R_003/spider_leg_4_R_004/spider_leg_4_R_005"
+            ]
+        },
+        {
+            "setName": "arm_joints",
+            "objectPaths": [
+                "/spider/spider_body/spider_arm_L_000",
+                "/spider/spider_body/spider_arm_L_000/spider_arm_L_001",
+                "/spider/spider_body/spider_arm_L_000/spider_arm_L_001/spider_arm_L_002",
+                "/spider/spider_body/spider_arm_L_000/spider_arm_L_001/spider_arm_L_002/spider_arm_L_003",
+                "/spider/spider_body/spider_arm_R_000",
+                "/spider/spider_body/spider_arm_R_000/spider_arm_R_001",
+                "/spider/spider_body/spider_arm_R_000/spider_arm_R_001/spider_arm_R_002",
+                "/spider/spider_body/spider_arm_R_000/spider_arm_R_001/spider_arm_R_002/spider_arm_R_003"
+            ]
+        },
+        {
+            "setName": "leg_roots",
+            "objectPaths": [
+                "/spider/spider_body/spider_leg_4_R_000",
+                "/spider/spider_body/spider_leg_4_L_000",
+                "/spider/spider_body/spider_leg_3_R_000",
+                "/spider/spider_body/spider_leg_3_L_000",
+                "/spider/spider_body/spider_leg_2_R_000",
+                "/spider/spider_body/spider_leg_2_L_000",
+                "/spider/spider_body/spider_leg_1_R_000",
+                "/spider/spider_body/spider_leg_1_L_000"
+            ]
+        },
+        {
+            "setName": "leg_non_root_joints",
+            "objectPaths": [
+                "/spider/spider_body/spider_leg_1_L_000/spider_leg_1_L_001",
+                "/spider/spider_body/spider_leg_1_L_000/spider_leg_1_L_001/spider_leg_1_L_002",
+                "/spider/spider_body/spider_leg_1_L_000/spider_leg_1_L_001/spider_leg_1_L_002/spider_leg_1_L_003",
+                "/spider/spider_body/spider_leg_1_L_000/spider_leg_1_L_001/spider_leg_1_L_002/spider_leg_1_L_003/spider_leg_1_L_004",
+                "/spider/spider_body/spider_leg_1_L_000/spider_leg_1_L_001/spider_leg_1_L_002/spider_leg_1_L_003/spider_leg_1_L_004/spider_leg_1_L_005",
+                "/spider/spider_body/spider_leg_1_R_000/spider_leg_1_R_001",
+                "/spider/spider_body/spider_leg_1_R_000/spider_leg_1_R_001/spider_leg_1_R_002",
+                "/spider/spider_body/spider_leg_1_R_000/spider_leg_1_R_001/spider_leg_1_R_002/spider_leg_1_R_003",
+                "/spider/spider_body/spider_leg_1_R_000/spider_leg_1_R_001/spider_leg_1_R_002/spider_leg_1_R_003/spider_leg_1_R_004",
+                "/spider/spider_body/spider_leg_1_R_000/spider_leg_1_R_001/spider_leg_1_R_002/spider_leg_1_R_003/spider_leg_1_R_004/spider_leg_1_R_005",
+                "/spider/spider_body/spider_leg_2_L_000/spider_leg_2_L_001",
+                "/spider/spider_body/spider_leg_2_L_000/spider_leg_2_L_001/spider_leg_2_L_002",
+                "/spider/spider_body/spider_leg_2_L_000/spider_leg_2_L_001/spider_leg_2_L_002/spider_leg_2_L_003",
+                "/spider/spider_body/spider_leg_2_L_000/spider_leg_2_L_001/spider_leg_2_L_002/spider_leg_2_L_003/spider_leg_2_L_004",
+                "/spider/spider_body/spider_leg_2_L_000/spider_leg_2_L_001/spider_leg_2_L_002/spider_leg_2_L_003/spider_leg_2_L_004/spider_leg_2_L_005",
+                "/spider/spider_body/spider_leg_2_R_000/spider_leg_2_R_001",
+                "/spider/spider_body/spider_leg_2_R_000/spider_leg_2_R_001/spider_leg_2_R_002",
+                "/spider/spider_body/spider_leg_2_R_000/spider_leg_2_R_001/spider_leg_2_R_002/spider_leg_2_R_003",
+                "/spider/spider_body/spider_leg_2_R_000/spider_leg_2_R_001/spider_leg_2_R_002/spider_leg_2_R_003/spider_leg_2_R_004",
+                "/spider/spider_body/spider_leg_2_R_000/spider_leg_2_R_001/spider_leg_2_R_002/spider_leg_2_R_003/spider_leg_2_R_004/spider_leg_2_R_005",
+                "/spider/spider_body/spider_leg_3_L_000/spider_leg_3_L_001",
+                "/spider/spider_body/spider_leg_3_L_000/spider_leg_3_L_001/spider_leg_3_L_002",
+                "/spider/spider_body/spider_leg_3_L_000/spider_leg_3_L_001/spider_leg_3_L_002/spider_leg_3_L_003",
+                "/spider/spider_body/spider_leg_3_L_000/spider_leg_3_L_001/spider_leg_3_L_002/spider_leg_3_L_003/spider_leg_3_L_004",
+                "/spider/spider_body/spider_leg_3_L_000/spider_leg_3_L_001/spider_leg_3_L_002/spider_leg_3_L_003/spider_leg_3_L_004/spider_leg_3_L_005",
+                "/spider/spider_body/spider_leg_3_R_000/spider_leg_3_R_001",
+                "/spider/spider_body/spider_leg_3_R_000/spider_leg_3_R_001/spider_leg_3_R_002",
+                "/spider/spider_body/spider_leg_3_R_000/spider_leg_3_R_001/spider_leg_3_R_002/spider_leg_3_R_003",
+                "/spider/spider_body/spider_leg_3_R_000/spider_leg_3_R_001/spider_leg_3_R_002/spider_leg_3_R_003/spider_leg_3_R_004",
+                "/spider/spider_body/spider_leg_3_R_000/spider_leg_3_R_001/spider_leg_3_R_002/spider_leg_3_R_003/spider_leg_3_R_004/spider_leg_3_R_005",
+                "/spider/spider_body/spider_leg_4_L_000/spider_leg_4_L_001",
+                "/spider/spider_body/spider_leg_4_L_000/spider_leg_4_L_001/spider_leg_4_L_002",
+                "/spider/spider_body/spider_leg_4_L_000/spider_leg_4_L_001/spider_leg_4_L_002/spider_leg_4_L_003",
+                "/spider/spider_body/spider_leg_4_L_000/spider_leg_4_L_001/spider_leg_4_L_002/spider_leg_4_L_003/spider_leg_4_L_004",
+                "/spider/spider_body/spider_leg_4_L_000/spider_leg_4_L_001/spider_leg_4_L_002/spider_leg_4_L_003/spider_leg_4_L_004/spider_leg_4_L_005",
+                "/spider/spider_body/spider_leg_4_R_000/spider_leg_4_R_001",
+                "/spider/spider_body/spider_leg_4_R_000/spider_leg_4_R_001/spider_leg_4_R_002",
+                "/spider/spider_body/spider_leg_4_R_000/spider_leg_4_R_001/spider_leg_4_R_002/spider_leg_4_R_003",
+                "/spider/spider_body/spider_leg_4_R_000/spider_leg_4_R_001/spider_leg_4_R_002/spider_leg_4_R_003/spider_leg_4_R_004",
+                "/spider/spider_body/spider_leg_4_R_000/spider_leg_4_R_001/spider_leg_4_R_002/spider_leg_4_R_003/spider_leg_4_R_004/spider_leg_4_R_005"
+            ]
+        },
+        {
+            "setName": "leg target",
+            "objectPaths": [
+                "/spider/spider_target_R_001"
+            ]
+        },
+        {
+            "setName": "Selection_20260217_120918",
+            "objectPaths": [
+                "/-- terain --/Arch"
+            ]
+        }
+    ]
+}
