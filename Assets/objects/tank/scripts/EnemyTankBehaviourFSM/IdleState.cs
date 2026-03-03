@@ -1,6 +1,6 @@
-public class IdleState : IState
+public class IdleState : IState<EnemyTankBehaviourFSM>
 {
-    public IState DoState(EnemyTankStateMachine machine)
+    public IState<EnemyTankBehaviourFSM> DoState(EnemyTankBehaviourFSM machine)
     {
         if (machine.patrolState.EncounteredEnemy(machine))
         {

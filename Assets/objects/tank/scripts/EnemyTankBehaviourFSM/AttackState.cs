@@ -1,7 +1,7 @@
-public class AttackState : IState
+public class AttackState : IState<EnemyTankBehaviourFSM>
 {
     private bool isTarget = true;
-    public IState DoState(EnemyTankStateMachine machine)
+    public IState<EnemyTankBehaviourFSM> DoState(EnemyTankBehaviourFSM machine)
     {
         if (machine.state != "Attack state") machine.state = "Attack state";
         DoAttackBehaviour (machine);
@@ -15,7 +15,7 @@ public class AttackState : IState
             return this;
         }
     }
-    void DoAttackBehaviour (EnemyTankStateMachine machine)
+    void DoAttackBehaviour (EnemyTankBehaviourFSM machine)
     {
         isTarget = machine.turretInputs.FindNearestTarget
         (

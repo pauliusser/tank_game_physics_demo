@@ -1,5 +1,4 @@
-public interface IState
+public interface IState<T> where T : class
 {
-    // This method does the state's work and returns the next state
-    IState DoState(EnemyTankStateMachine fsm);
+    IState<T> DoState(T machine);
 }

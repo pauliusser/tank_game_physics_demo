@@ -5,11 +5,28 @@ public class PlayerInputHandler : MonoBehaviour
 {
     [Header("Input Action")]
     public InputAction moveAction;   // 2D vector: x = turn, y = throttle
-
+    public InputAction recoverAction;
     private IDrivable drivableVehicle;
+    private TankVehicleFSM fsm;
 
-    private void OnEnable() => moveAction.Enable();
-    private void OnDisable() => moveAction.Disable();
+    private void OnEnable()
+    {
+        moveAction.Enable();
+        recoverAction.Enable();
+        recoverAction.performed += OnRecoverPerformed;
+
+        fsm = GetComponent<TankVehicleFSM>();
+    }
+    private void OnDisable()
+    {
+        moveAction.Disable();
+        recoverAction.Disable();
+        recoverAction.performed -= OnRecoverPerformed;
+    }
+    private void OnRecoverPerformed(InputAction.CallbackContext ctx)
+    {
+        fsm.Recover();
+    }
 
     private void Awake()
     {

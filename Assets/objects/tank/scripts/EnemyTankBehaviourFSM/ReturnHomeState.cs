@@ -1,9 +1,9 @@
 using UnityEngine;
 
-public class ReturnHomeState : IState
+public class ReturnHomeState : IState<EnemyTankBehaviourFSM>
 {
     private bool isReturning = false;
-    public IState DoState(EnemyTankStateMachine machine)
+    public IState<EnemyTankBehaviourFSM> DoState(EnemyTankBehaviourFSM machine)
     {
         if (machine.state != "return home state") machine.state = "return home state";
         DoReturnToHomeBehaviour (machine);
@@ -23,18 +23,18 @@ public class ReturnHomeState : IState
             return this; // stay in BarState
         }
     }
-    private bool isHasReturned(EnemyTankStateMachine machine)
+    private bool isHasReturned(EnemyTankBehaviourFSM machine)
     {
         float distance = (machine.tankBody.transform.position - machine.homepoint.transform.position).magnitude;
         return distance <= machine.arivalDistance;
     }
-    void DoReturnToHomeBehaviour (EnemyTankStateMachine machine)
+    void DoReturnToHomeBehaviour (EnemyTankBehaviourFSM machine)
     {
         if (isReturning) return;
         machine.navController.navTarget = machine.homepoint;
         isReturning = true;
     }
-    void Reset(EnemyTankStateMachine machine)
+    void Reset(EnemyTankBehaviourFSM machine)
     {
         isReturning = false;
         machine.navController.navTarget = null;

@@ -1,12 +1,12 @@
 using UnityEngine;
 
-public class PatrolState : IState
+public class PatrolState : IState<EnemyTankBehaviourFSM>
 {
     private int currentWaypointIndex = 0;
     private float distanceToWaypoint;
     private bool isPatrolInterupted = false;
     private bool isPatrolFinished = false;
-    public IState DoState(EnemyTankStateMachine machine)
+    public IState<EnemyTankBehaviourFSM> DoState(EnemyTankBehaviourFSM machine)
     {
         if (machine.state != "patrol state") machine.state = "patrol state";
 
@@ -26,7 +26,7 @@ public class PatrolState : IState
             return this; // stay in FooState
         }
     }
-    void DoPatrollBehaviour(EnemyTankStateMachine machine)
+    void DoPatrollBehaviour(EnemyTankBehaviourFSM machine)
     {
         distanceToWaypoint = Vector3.Magnitude(machine.waypoints[currentWaypointIndex].position - machine.tankBody.transform.position);
 
@@ -45,7 +45,7 @@ public class PatrolState : IState
             machine.navController.navTarget = machine.waypoints[currentWaypointIndex];
         }
     }
-    public bool EncounteredEnemy(EnemyTankStateMachine machine)
+    public bool EncounteredEnemy(EnemyTankBehaviourFSM machine)
     {
         Collider[] hits = new Collider[20];
         int count = Physics.OverlapSphereNonAlloc
@@ -83,7 +83,7 @@ public class PatrolState : IState
 
         return nearest != null;
     }
-    public void Reset(EnemyTankStateMachine machine)
+    public void Reset(EnemyTankBehaviourFSM machine)
     {
         // stop patrolling
         machine.navController.navTarget = null;

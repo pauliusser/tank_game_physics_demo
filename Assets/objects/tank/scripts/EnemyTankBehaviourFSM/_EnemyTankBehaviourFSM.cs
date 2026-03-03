@@ -1,9 +1,9 @@
 using UnityEngine;
 
-public class EnemyTankStateMachine : MonoBehaviour
+public class EnemyTankBehaviourFSM : MonoBehaviour
 {
     [Header("Initialisation")]
-    private IState currentState; 
+    private IState<EnemyTankBehaviourFSM> currentState; 
     public GameObject tankBody;
     public GameObject tankTurret;
     public AINavigationController navController;

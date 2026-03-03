@@ -1,0 +1,44 @@
+✔ mouse target turi būti enemy game object centro gylyje @done(26-03-03 15:12)
+UI dizainas:
+    ☐ meniu
+    ☐ baterijos widget
+    ☐ mouse target
+    ☐ balistic target
+Managers:
+    ☐ gameManager
+    ☐ eventsManager
+AI:
+    ☐ ai obstacle avoidance 
+    ☐ ai važiuoja kiaurai vieni kitus
+Tank:
+    ☐ šaudymo atstumo ribojimas
+    ☐ turbo                       SHIFT mygtukas
+    ☐ ICollectable interfeisas    E mygtukas equip
+        ☐ gyvybės
+        ☐ šarvai
+        ☐ baterijos
+    ✔ capsize detection @done(26-03-04 01:05)
+    ✔ recovery mechanika          R mygtukas recover @done(26-03-04 01:05)
+    ☐ recharge mechanika
+    model overhaul:
+        ☐ kebulas
+        ☐ šarvai
+        ☐ baterijų skyrius
+        ☐ antena
+        ☐ lemputės
+        ☐ žibintai
+        ☐ kulkosvaidininkas
+    
+skirtinga amonicija:
+    ☐ ofisines knopkes
+    ☐ saldainiai
+    ☐ šaratai
+    ☐ tiktakai
+    ☐ kramtoske
+
+☐ trasa
+
+☐ garsai
+☐ efektai
+
+

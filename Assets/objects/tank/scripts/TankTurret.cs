@@ -11,6 +11,7 @@ public class ProjectileConfig
 public class TankTurret : MonoBehaviour, ITurretControllable
 {
     [Header("Turret Control")]
+    public bool isEnabled = true;
     public Transform shotTarget;                // Set externally (e.g., mouse target)
     public int projectileIndex = 0;              // Current selected projectile (0‑based)
 
@@ -86,6 +87,7 @@ public class TankTurret : MonoBehaviour, ITurretControllable
 
     private void FixedUpdate()
     {
+        if(!isEnabled) return;
         if (shotTarget == null && turretPivot != null && gunPivot != null)
         {
             // Debug.Log("rotating home");
@@ -120,6 +122,7 @@ public class TankTurret : MonoBehaviour, ITurretControllable
     // ---------- Interface Methods ----------
     public void Fire()
     {
+        if (!isEnabled) return;
         if (firePoint == null || currentProjectile == null || currentProjectile.prefab == null) return;
 
         GameObject projectile = Instantiate(currentProjectile.prefab, firePoint.position, firePoint.rotation);
@@ -278,7 +281,7 @@ public class TankTurret : MonoBehaviour, ITurretControllable
     }
 
     // ---------- Rotation Methods (unchanged) ----------
-    private void RotateTurretToHome()
+    public void RotateTurretToHome()
     {
         Vector3 localEuler = turretPivot.localEulerAngles;
         float error = Mathf.Abs(localEuler.y);
@@ -293,7 +296,7 @@ public class TankTurret : MonoBehaviour, ITurretControllable
             turretPivot.localEulerAngles = Vector3.zero;
         }
     }
-    private void RotateGunToHome()
+    public void RotateGunToHome()
     {
         Vector3 localEuler = gunPivot.localEulerAngles;
         float error = Mathf.Abs(localEuler.x);
