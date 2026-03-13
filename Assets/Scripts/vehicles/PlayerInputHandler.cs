@@ -6,6 +6,7 @@ public class PlayerInputHandler : MonoBehaviour
     [Header("Input Action")]
     public InputAction moveAction;   // 2D vector: x = turn, y = throttle
     public InputAction recoverAction;
+    public InputAction pauseAction;
     private IDrivable drivableVehicle;
     private TankVehicleFSM fsm;
 
@@ -14,18 +15,36 @@ public class PlayerInputHandler : MonoBehaviour
         moveAction.Enable();
         recoverAction.Enable();
         recoverAction.performed += OnRecoverPerformed;
+        pauseAction.Enable();
+        pauseAction.performed += OnPausePerformed;
 
         fsm = GetComponent<TankVehicleFSM>();
+
+        GameEvents.SubToOnPauseToggled(TogglePause);
     }
     private void OnDisable()
     {
         moveAction.Disable();
         recoverAction.Disable();
         recoverAction.performed -= OnRecoverPerformed;
+        pauseAction.Disable();
+        pauseAction.performed -= OnPausePerformed;
+
+        GameEvents.UnsubFromOnPauseToggled(TogglePause);
     }
     private void OnRecoverPerformed(InputAction.CallbackContext ctx)
     {
         fsm.Recover();
+    }
+    private void OnPausePerformed(InputAction.CallbackContext ctx)
+    {
+        GameEvents.InvokeOnPauseToggled();
+        // UIManager.Instance.ShowPause();
+    }
+    private void TogglePause()
+    {
+        Debug.Log("pause toggle");
+        
     }
 
     private void Awake()

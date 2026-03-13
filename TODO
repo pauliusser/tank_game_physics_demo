@@ -1,17 +1,21 @@
 ✔ mouse target turi būti enemy game object centro gylyje @done(26-03-03 15:12)
 UI dizainas:
-    ☐ meniu
-    ☐ baterijos widget
+    ✔ meniu @done(26-03-04 13:16)
+    ✔ baterijos widget @done(26-03-13 23:22)
+    ✔ taskai @done(26-03-13 23:22)
+    ✔ gyvybes @done(26-03-13 23:22)
+    ☐ inventorius
     ☐ mouse target
     ☐ balistic target
 Managers:
-    ☐ gameManager
-    ☐ eventsManager
+    ✔ gameManager @done(26-03-13 23:22)
+    ✔ eventsManager @done(26-03-13 23:22)
 AI:
     ☐ ai obstacle avoidance 
     ☐ ai važiuoja kiaurai vieni kitus
 Tank:
     ☐ šaudymo atstumo ribojimas
+    ☐ atotranka
     ☐ turbo                       SHIFT mygtukas
     ☐ ICollectable interfeisas    E mygtukas equip
         ☐ gyvybės
@@ -35,6 +39,7 @@ skirtinga amonicija:
     ☐ šaratai
     ☐ tiktakai
     ☐ kramtoske
+    ☐ savarzeles
 
 ☐ trasa
 
