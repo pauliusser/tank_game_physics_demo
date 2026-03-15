@@ -3472,6 +3472,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 2107887168779189008, guid: b5c12e4e4e85dd444827d8af90c70255, type: 3}
+      propertyPath: m_TagString
+      value: Player
+      objectReference: {fileID: 0}
     - target: {fileID: 2202082252332197556, guid: b5c12e4e4e85dd444827d8af90c70255, type: 3}
       propertyPath: m_LocalPosition.y
       value: 0.213726
@@ -3652,6 +3656,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 8506500108117677875, guid: b5c12e4e4e85dd444827d8af90c70255, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
     - target: {fileID: 8664955226335487631, guid: b5c12e4e4e85dd444827d8af90c70255, type: 3}
       propertyPath: m_Enabled
       value: 0
@@ -3731,7 +3739,7 @@ PrefabInstance:
       addedObject: {fileID: 5805942099039637300}
     - targetCorrespondingSourceObject: {fileID: 2107887168779189008, guid: b5c12e4e4e85dd444827d8af90c70255, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 9092624671291963768}
+      addedObject: {fileID: 6469598632144826315}
     - targetCorrespondingSourceObject: {fileID: 2107887168779189008, guid: b5c12e4e4e85dd444827d8af90c70255, type: 3}
       insertIndex: -1
       addedObject: {fileID: 9139898915327137442}
@@ -3747,6 +3755,15 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 2107887168779189008, guid: b5c12e4e4e85dd444827d8af90c70255, type: 3}
       insertIndex: -1
       addedObject: {fileID: 9121999222780784432}
+    - targetCorrespondingSourceObject: {fileID: 2107887168779189008, guid: b5c12e4e4e85dd444827d8af90c70255, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 4568727284715624978}
+    - targetCorrespondingSourceObject: {fileID: 2107887168779189008, guid: b5c12e4e4e85dd444827d8af90c70255, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1963132668618501425}
+    - targetCorrespondingSourceObject: {fileID: 2107887168779189008, guid: b5c12e4e4e85dd444827d8af90c70255, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 3361008822293523909}
     - targetCorrespondingSourceObject: {fileID: 8506500108117677875, guid: b5c12e4e4e85dd444827d8af90c70255, type: 3}
       insertIndex: -1
       addedObject: {fileID: 4480329140904178646}
@@ -3947,7 +3964,7 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: -391557553835260612, guid: b5c12e4e4e85dd444827d8af90c70255, type: 3}
---- !u!64 &9092624671291963768
+--- !u!64 &6469598632144826315
 MeshCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -4094,6 +4111,24 @@ MonoBehaviour:
       m_Action: Move
       m_Flags: 8
     m_Flags: 0
+  recoverAction:
+    m_Name: Recover
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: c611be03-c6c4-4e12-a451-2ddde3bda48c
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings: []
+    m_Flags: 0
+  pauseAction:
+    m_Name: Pause
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: c5a0895e-0c17-4c1f-b71a-f2a121350bff
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings: []
+    m_Flags: 0
 --- !u!114 &9121999222780784432
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4106,19 +4141,68 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3371bb884d937a6499a6347d89396921, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TankVehicle
+  CurrentStateName: 
+  AIBehaviour: {fileID: 0}
+  damageHandler: {fileID: 0}
+  deathHandler: {fileID: 0}
+  stats: {fileID: 0}
+  capsizethreshold: 0.1
+  stuckTimeout: 3
+  recoverCooldown: 10
+--- !u!114 &4568727284715624978
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2881839511789833260}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 42ccd41e39da33d42920c1a06ff07a86, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TankStats
   maxHealth: 300
+  maxShield: 200
+  shield: 200
+  lives: 3
+  score: 0
+  capacitor: 100
+  battery: 100
+--- !u!114 &1963132668618501425
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2881839511789833260}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 15624f5a967b3484f90ca04cc4eb29b7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TankDamageHandler
+--- !u!114 &3361008822293523909
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2881839511789833260}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 60dc7804fcbc0c44fbf75344926b39d0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TankDeathHandler
+  explosionPrefab: {fileID: 2762338130192966092, guid: 5e2b37b4c0e69d44db0560a80175fb4c, type: 3}
   parts:
   - {fileID: 5638301023273601550}
   - {fileID: 5427255797567561096}
   turret: {fileID: 5526982398331969551}
   root: {fileID: 3927007087389428333}
-  explosionPrefab: {fileID: 2762338130192966092, guid: 5e2b37b4c0e69d44db0560a80175fb4c, type: 3}
-  stateMachine: {fileID: 0}
   wreckageMat: {fileID: 13400000, guid: 91fc82ed398e4f041945858a34fea235, type: 2}
   explosionForce: 20
   addRandomRotation: 1
   maxRandomTorque: 3
-  wreckageLayerName: Wreckage
+  wreckageLayer: 0
 --- !u!1 &2897708028773157052 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -7887953680927375488, guid: b5c12e4e4e85dd444827d8af90c70255, type: 3}
@@ -4517,6 +4601,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 73a637d4b6d30af499f26daba1fcced8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TankTurret
+  isEnabled: 1
   shotTarget: {fileID: 0}
   projectileIndex: 0
   turretPivot: {fileID: 5485046306885415813}
@@ -4531,6 +4616,7 @@ MonoBehaviour:
   defaultAimOffset: 2
   minAimOffset: 0.5
   maxAimOffset: 20
+  damageSourceObject: {fileID: 2881839511789833260}
   projectiles:
   - prefab: {fileID: 3529076035160440060, guid: 5e10f1df6f2a76645b765a513728aa62, type: 3}
     damage: 34
@@ -4633,10 +4719,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BallisticTrajectory
   maxSegments: 50
-  lineWidth: 0.01
+  lineWidth: 0.24
   collisionMask:
     serializedVersion: 2
     m_Bits: 2039
+  crossPoint: {x: 0, y: 0, z: 0}
+  isColidingEnemy: 0
+  enemyLayerMask:
+    serializedVersion: 2
+    m_Bits: 4608
+  startOffset: 0.5
+  endOffset: 0.5
 --- !u!120 &5181562982233960008
 LineRenderer:
   serializedVersion: 2
@@ -4709,7 +4802,7 @@ LineRenderer:
     colorGradient:
       serializedVersion: 2
       key0: {r: 1, g: 1, b: 1, a: 1}
-      key1: {r: 1, g: 0, b: 0, a: 1}
+      key1: {r: 1, g: 1, b: 1, a: 1}
       key2: {r: 0, g: 0, b: 0, a: 0}
       key3: {r: 0, g: 0, b: 0, a: 0}
       key4: {r: 0, g: 0, b: 0, a: 0}

@@ -14,9 +14,13 @@ public class UIManager : MonoBehaviour
         }
         Instance = this;
     }
-    public UIDocument HUD;
+
+    [Header("References")]
+
+    public GameObject HUD;
     public UIDocument pause;
 
+    
     public void ShowPause()
     {
         pause.enabled = true;
@@ -25,5 +29,6 @@ public class UIManager : MonoBehaviour
     {
         pause.enabled = false;
     }
+    
 
 }

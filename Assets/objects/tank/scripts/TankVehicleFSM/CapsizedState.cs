@@ -22,7 +22,7 @@ public class StuckState : IState<TankVehicleFSM>
             stuckPos = machine.transform.position;
             stuckRot = machine.transform.rotation;
             FindRecoverPosition(machine);
-            turret = machine.turret.GetComponent<TankTurret>();
+            turret = machine.deathHandler.turret.GetComponent<TankTurret>();
             turret.isEnabled = false;
         }
         else 

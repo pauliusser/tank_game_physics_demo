@@ -1,21 +1,36 @@
 using System;
+public class GameEvent<T>
+{
+    private event Action<T> listeners;
+
+    public void Subscribe(Action<T> listener) => listeners += listener;
+    public void Unsubscribe(Action<T> listener) => listeners -= listener;
+    public void Invoke(T data) => listeners?.Invoke(data);
+}
+
+public class GameEvent
+{
+    private event Action listeners;
+
+    public void Subscribe(Action listener) => listeners += listener;
+    public void Unsubscribe(Action listener) => listeners -= listener;
+    public void Invoke() => listeners?.Invoke();
+}
 
 public static class GameEvents
 {
-    private static event Action OnGameStart;       
-    public static void SubToOnGameStart(Action observer) => OnGameStart += observer;
-    public static void UnsubFromOnGameStart(Action observer) => OnGameStart -= observer;
-    public static void InvokeOnGameStart() => OnGameStart?.Invoke();
+    public static GameEvent OnGameStart = new GameEvent();
+    public static GameEvent OnPauseToggled = new GameEvent();
+    public static GameEvent OnPlayerDied = new GameEvent();
 
 
-    private static event Action OnPauseToggled;       
-    public static void SubToOnPauseToggled(Action observer) => OnPauseToggled += observer;
-    public static void UnsubFromOnPauseToggled(Action observer) => OnPauseToggled -= observer;
-    public static void InvokeOnPauseToggled() => OnPauseToggled?.Invoke();
-
-
-    private static event Action OnPlayerDied;       
-    public static void SubToOnOnPlayerDied(Action observer) => OnPlayerDied += observer;
-    public static void UnsubFromOnPlayerDied(Action observer) => OnPlayerDied -= observer;
-    public static void InvokeOnOnPlayerDied() => OnPlayerDied?.Invoke();
+    public static GameEvent OnRefreshHUD = new GameEvent();
+    public static GameEvent<float> OnHealthUpdate = new GameEvent<float>();
+    public static GameEvent<float> OnShieldUpdate = new GameEvent<float>();
+    public static GameEvent<int> OnLivesUpdate = new GameEvent<int>();
+    public static GameEvent<int> OnScoreUpdate = new GameEvent<int>();
+    public static GameEvent<float> OnCapacitorUpdate = new GameEvent<float>();
+    public static GameEvent<float> OnBatteryUpdate = new GameEvent<float>();
+    
+    public static GameEvent<int> OnPlayerScored = new GameEvent<int>();
 }

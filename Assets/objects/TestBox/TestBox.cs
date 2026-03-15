@@ -2,6 +2,7 @@ using UnityEngine;
 
 public class TestBox : MonoBehaviour, IDamagable
 {
+    public int score = 10;
     public int maxHealth = 100;
     public int Health { get; set; }
     private Renderer rend;
@@ -20,7 +21,14 @@ public class TestBox : MonoBehaviour, IDamagable
         if (d.type == "kinetic") Health -= d.damage;
         if (d.type == "explosive") Health -= d.damage;
         // Debug.Log($"damage: {d.damage} health: {Health} type: {d.type} source: {d.source}");
-        if (Health <= 0) Destroy(gameObject);
+        if (Health <= 0) 
+        {
+            Destroy(gameObject);
+            if(d.source.tag == "Player")
+            {
+                GameEvents.OnPlayerScored.Invoke(score);
+            }
+        }
         UpdateTint();
     }
     void UpdateTint()

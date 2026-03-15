@@ -5,11 +5,13 @@ UI dizainas:
     ✔ taskai @done(26-03-13 23:22)
     ✔ gyvybes @done(26-03-13 23:22)
     ☐ inventorius
-    ☐ mouse target
-    ☐ balistic target
+    ✔ mouse target @done(26-03-14 21:50)
+    ✔ balistic target @done(26-03-14 21:50)
 Managers:
     ✔ gameManager @done(26-03-13 23:22)
     ✔ eventsManager @done(26-03-13 23:22)
+    events:
+        
 AI:
     ☐ ai obstacle avoidance 
     ☐ ai važiuoja kiaurai vieni kitus

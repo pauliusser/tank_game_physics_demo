@@ -20,7 +20,7 @@ public class PlayerInputHandler : MonoBehaviour
 
         fsm = GetComponent<TankVehicleFSM>();
 
-        GameEvents.SubToOnPauseToggled(TogglePause);
+        GameEvents.OnPauseToggled.Subscribe(TogglePause);
     }
     private void OnDisable()
     {
@@ -30,7 +30,7 @@ public class PlayerInputHandler : MonoBehaviour
         pauseAction.Disable();
         pauseAction.performed -= OnPausePerformed;
 
-        GameEvents.UnsubFromOnPauseToggled(TogglePause);
+        GameEvents.OnPauseToggled.Unsubscribe(TogglePause);
     }
     private void OnRecoverPerformed(InputAction.CallbackContext ctx)
     {
@@ -38,8 +38,7 @@ public class PlayerInputHandler : MonoBehaviour
     }
     private void OnPausePerformed(InputAction.CallbackContext ctx)
     {
-        GameEvents.InvokeOnPauseToggled();
-        // UIManager.Instance.ShowPause();
+        GameEvents.OnPauseToggled.Invoke();
     }
     private void TogglePause()
     {

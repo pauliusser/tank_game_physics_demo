@@ -33,16 +33,16 @@ public class GameManager : MonoBehaviour
 
     private void OnEnable()
     {
-        GameEvents.SubToOnGameStart(StartGame);
-        GameEvents.SubToOnOnPlayerDied(GameOver);
-        GameEvents.SubToOnPauseToggled(TogglePause);
+        GameEvents.OnGameStart.Subscribe(StartGame);
+        GameEvents.OnPlayerDied.Subscribe(GameOver);
+        GameEvents.OnPauseToggled.Subscribe(TogglePause);
     }
 
     private void OnDisable()
     {
-        GameEvents.UnsubFromOnGameStart(StartGame);
-        GameEvents.UnsubFromOnPlayerDied(GameOver);
-        GameEvents.UnsubFromOnPauseToggled(TogglePause);
+        GameEvents.OnGameStart.Subscribe(StartGame);
+        GameEvents.OnPlayerDied.Subscribe(GameOver);
+        GameEvents.OnPauseToggled.Subscribe(TogglePause);
     }
 
     private void StartGame() => SetState(GameState.Playing);

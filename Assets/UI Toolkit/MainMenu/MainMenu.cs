@@ -20,7 +20,7 @@ public class MainMenu : MonoBehaviour
     {
         // Debug.Log("play button clicked");
         // SceneManager.LoadScene("GameScene");
-        GameEvents.InvokeOnGameStart();
+        GameEvents.OnGameStart.Invoke();
     }
     private void OnExitClicked()
     {

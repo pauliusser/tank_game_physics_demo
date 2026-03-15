@@ -23,6 +23,7 @@ public class KineticProjectile : MonoBehaviour
     public float sinkDistance = 0.5f; // How far the projectile sinks into the ground
     public AnimationCurve sinkCurve = AnimationCurve.EaseInOut(0, 0, 1, 1); // Controls sink progression
     public int kineticDmg = 10;
+    public GameObject damageSource;
     private Rigidbody rb;
     private TrailRenderer trail;
     private Vector3 previousPosition;
@@ -44,6 +45,7 @@ public class KineticProjectile : MonoBehaviour
     
     void Awake()
     {
+        if (damageSource == null) damageSource = gameObject;
         rb = GetComponent<Rigidbody>();
         trail = GetComponent<TrailRenderer>();
         projectileCollider = GetComponent<Collider>();
@@ -64,7 +66,7 @@ public class KineticProjectile : MonoBehaviour
     {
         kineticDamage.damage = kineticDmg;
         kineticDamage.type = "kinetic";
-        kineticDamage.source = gameObject;
+        kineticDamage.source = damageSource;
     }
 
     void SetupTrail()

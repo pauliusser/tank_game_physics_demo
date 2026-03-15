@@ -38,6 +38,7 @@ public class TankTurret : MonoBehaviour, ITurretControllable
     public float maxAimOffset = 10f;
 
     [Header("Projectile Types")]
+    public GameObject damageSourceObject;
     public ProjectileConfig[] projectiles;         // array of available projectile types
 
     [Header("Debug")]
@@ -130,12 +131,20 @@ public class TankTurret : MonoBehaviour, ITurretControllable
         if (currentProjectile.isKinetic)
         {
             var kinetic = projectile.GetComponent<KineticProjectile>();
-            if (kinetic != null) kinetic.kineticDmg = currentProjectile.damage;
+            if (kinetic != null) 
+            {
+                kinetic.kineticDmg = currentProjectile.damage;
+                kinetic.damageSource = damageSourceObject;
+            }
         }
         else
         {
             var explosive = projectile.GetComponent<ExplosiveProjectile>();
-            if (explosive != null) explosive.blastDmg = currentProjectile.damage;
+            if (explosive != null)
+            {
+                explosive.blastDmg = currentProjectile.damage;
+                explosive.damageSource = damageSourceObject;
+            }
         }
 
         Rigidbody rb = projectile.GetComponent<Rigidbody>();

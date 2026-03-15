@@ -9,6 +9,7 @@ public class ExplosiveProjectile : MonoBehaviour
     public GameObject impactEffectPrefab;   // Particle system prefab (e.g., sparks)
     public float effectDestroyDelay = 2f;    // Time after which the effect is destroyed
     public int blastDmg;
+    public GameObject damageSource;
 
     [Header("Trail Settings")]
     public float trailTime = 0.5f;
@@ -35,11 +36,11 @@ public class ExplosiveProjectile : MonoBehaviour
         SetupTrail();
     }
 
-    void Start()
-    {
-        // Set the source of the explosion to this projectile
-        explosion.sourceObject = gameObject;
-    }
+    // void Start()
+    // {
+    //     // Set the source of the explosion to this projectile
+    //     explosion.sourceObject = gameObject;
+    // }
 
     void SetupTrail()
     {
@@ -87,6 +88,7 @@ public class ExplosiveProjectile : MonoBehaviour
         }
 
         explosion.maxDamage = blastDmg;
+        explosion.sourceObject = damageSource != null ? damageSource : gameObject;
         // Trigger explosion at impact point
         explosion.ExplodeAt(hitPoint);
 
