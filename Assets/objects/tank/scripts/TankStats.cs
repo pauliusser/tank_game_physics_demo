@@ -9,8 +9,10 @@ public class TankStats : MonoBehaviour
     public int shield = 200;
     public int lives = 3;
     public int score = 0;
-    public int capacitor = 100;
-    public int battery = 100;
+    public float capacitor = 0f;
+    public float maxCapacitor = 100f;
+    public float battery = 0f;
+    public float maxBattery = 3000f;
 
     void Awake()
     {

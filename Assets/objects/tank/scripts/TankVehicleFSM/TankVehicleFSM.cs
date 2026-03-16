@@ -9,6 +9,8 @@ public class TankVehicleFSM : MonoBehaviour
     public TankDamageHandler damageHandler;
     public TankDeathHandler deathHandler;
     public TankStats stats;
+    public GameObject body;
+    public GameObject turret;
 
     private IState<TankVehicleFSM> currentState;
 

@@ -30,8 +30,23 @@ public class CursorTarget : MonoBehaviour
         }
     }
 
+    void OnEnable()
+    {
+        PlayerEvents.OnTankSpawn.Subscribe(SetTrajectoryComponent);
+    }
+    void OnDisable()
+    {
+        PlayerEvents.OnTankSpawn.Unsubscribe(SetTrajectoryComponent);
+    }
+    void SetTrajectoryComponent(GameObject tank)
+    {
+        trajectory = tank.GetComponent<TankVehicleFSM>().turret.GetComponent<BallisticTrajectory>();
+        Debug.Log(trajectory);
+    }
+
     void Update()
     {
+        if (trajectory == null) return;
         mouseScreenPos = Mouse.current.position.ReadValue();
         dotTr.x = mouseScreenPos.x - offset.x;
         dotTr.y = -mouseScreenPos.y + offset.y;

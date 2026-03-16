@@ -288,7 +288,7 @@ public class EditorInputDialog : EditorWindow
         EditorGUILayout.BeginHorizontal();
         GUILayout.FlexibleSpace();
         
-        if (GUILayout.Button("OK", GUILayout.Width(80)) || (Event.current.isKey && Event.current.keyCode == KeyCode.Return))
+        if (GUILayout.Button("OK", GUILayout.Width(80)) || (UnityEngine.Event.current.isKey && UnityEngine.Event.current.keyCode == KeyCode.Return))
         {
             Close();
         }

@@ -5,10 +5,18 @@ public class PlayerInputHandler : MonoBehaviour
 {
     [Header("Input Action")]
     public InputAction moveAction;   // 2D vector: x = turn, y = throttle
+    public InputAction turboAction;
     public InputAction recoverAction;
     public InputAction pauseAction;
     private IDrivable drivableVehicle;
     private TankVehicleFSM fsm;
+    private bool didHaveMoveInput = false;
+
+    public void SetTarget(IDrivable currentDrivable, TankVehicleFSM currentFSM)
+    {
+        drivableVehicle = currentDrivable;
+        fsm = currentFSM;
+    }
 
     private void OnEnable()
     {
@@ -17,6 +25,9 @@ public class PlayerInputHandler : MonoBehaviour
         recoverAction.performed += OnRecoverPerformed;
         pauseAction.Enable();
         pauseAction.performed += OnPausePerformed;
+        turboAction.Enable();
+        turboAction.performed += OnTurboPerformed;
+        turboAction.canceled += OnTurboCanceled;
 
         fsm = GetComponent<TankVehicleFSM>();
 
@@ -29,8 +40,19 @@ public class PlayerInputHandler : MonoBehaviour
         recoverAction.performed -= OnRecoverPerformed;
         pauseAction.Disable();
         pauseAction.performed -= OnPausePerformed;
+        turboAction.Disable();
+        turboAction.performed -= OnTurboPerformed;
+        turboAction.canceled -= OnTurboCanceled;
 
         GameEvents.OnPauseToggled.Unsubscribe(TogglePause);
+    }
+    private void OnTurboPerformed(InputAction.CallbackContext ctx)
+    {
+        GameEvents.OnTurboToggled.Invoke(true);
+    }
+    private void OnTurboCanceled(InputAction.CallbackContext ctx)
+    {
+        GameEvents.OnTurboToggled.Invoke(false);
     }
     private void OnRecoverPerformed(InputAction.CallbackContext ctx)
     {
@@ -46,15 +68,15 @@ public class PlayerInputHandler : MonoBehaviour
         
     }
 
-    private void Awake()
-    {
-        // Get the first component that implements IDrivable on this GameObject
-        drivableVehicle = GetComponent<IDrivable>();
-        if (drivableVehicle == null)
-        {
-            Debug.LogError("PlayerInputHandler: No component implementing IDrivable found on " + gameObject.name);
-        }
-    }
+    // private void Awake()
+    // {
+    //     // Get the first component that implements IDrivable on this GameObject
+    //     drivableVehicle = GetComponent<IDrivable>();
+    //     if (drivableVehicle == null)
+    //     {
+    //         Debug.LogError("PlayerInputHandler: No component implementing IDrivable found on " + gameObject.name);
+    //     }
+    // }
 
     private void Update()
     {
@@ -67,5 +89,14 @@ public class PlayerInputHandler : MonoBehaviour
 
         drivableVehicle.DriveX = inpX;
         drivableVehicle.DriveY = inpY;
+
+        bool hasMoveInput = (inpX + inpY) > 0;
+
+        if (hasMoveInput != didHaveMoveInput)
+        {
+            GameEvents.OnMoveInputsToggled.Invoke(hasMoveInput);
+        }
+
+        didHaveMoveInput = hasMoveInput;
     }
 }

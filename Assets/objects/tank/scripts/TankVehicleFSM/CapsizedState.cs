@@ -19,8 +19,8 @@ public class StuckState : IState<TankVehicleFSM>
             Debug.Log("tankas apvirto");
             isRecovering = true;
             recoveryStart = Time.time;
-            stuckPos = machine.transform.position;
-            stuckRot = machine.transform.rotation;
+            stuckPos = machine.body.transform.position;
+            stuckRot = machine.body.transform.rotation;
             FindRecoverPosition(machine);
             turret = machine.deathHandler.turret.GetComponent<TankTurret>();
             turret.isEnabled = false;
@@ -51,16 +51,16 @@ public class StuckState : IState<TankVehicleFSM>
         float recoveryPercentage = (Time.time - recoveryStart) / recoveryTimespan;
         float tPos = Mathf.Clamp01(recoveryPercentage * 2);
         float tRot = Mathf.Clamp01(recoveryPercentage * 2 - 1);
-        machine.transform.position = Vector3.Lerp(stuckPos, recoverPos, tPos);
-        machine.transform.rotation = Quaternion.Slerp(stuckRot, recoverRot, tRot);
+        machine.body.transform.position = Vector3.Lerp(stuckPos, recoverPos, tPos);
+        machine.body.transform.rotation = Quaternion.Slerp(stuckRot, recoverRot, tRot);
         isRecovered = recoveryPercentage >= 1f;
     }
     private void FindRecoverPosition(TankVehicleFSM machine)
     {
-        isRecoverable = NavMeshPointFinder.TryGetClosestNavMeshPoint(machine.gameObject,out recoverPos, 2f);
+        isRecoverable = NavMeshPointFinder.TryGetClosestNavMeshPoint(machine.body.gameObject,out recoverPos, 2f);
         recoverPos.y += 0.7f;
 
-        Quaternion rotation = Quaternion.FromToRotation(machine.transform.up, Vector3.up);
-        recoverRot = rotation * machine.transform.rotation;
+        Quaternion rotation = Quaternion.FromToRotation(machine.body.transform.up, Vector3.up);
+        recoverRot = rotation * machine.body.transform.rotation;
     }
 }

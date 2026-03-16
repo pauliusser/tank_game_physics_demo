@@ -12,18 +12,21 @@ public class PlayerTurretInputs : MonoBehaviour
     [Header("Settings")]
     public float scrollSensitivity = 1f;
     public Transform mouseTarget; // Assign the MouseTarget GameObject here
-
     private ITurretControllable turretController;
-
-    private void Awake()
+    public void SetTarget(ITurretControllable currentTurret)
     {
-        turretController = GetComponent<ITurretControllable>();
-        if (turretController == null)
-            turretController = GetComponentInParent<ITurretControllable>();
-
-        if (turretController == null)
-            Debug.LogError("PlayerTurretInputs: No ITurretControllable found.");
+        turretController = currentTurret;
     }
+
+    // private void Awake()
+    // {
+    //     turretController = GetComponent<ITurretControllable>();
+    //     if (turretController == null)
+    //         turretController = GetComponentInParent<ITurretControllable>();
+
+    //     if (turretController == null)
+    //         Debug.LogError("PlayerTurretInputs: No ITurretControllable found.");
+    // }
 
     private void OnEnable()
     {

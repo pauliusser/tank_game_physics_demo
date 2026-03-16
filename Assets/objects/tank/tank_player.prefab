@@ -3182,15 +3182,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: b5c12e4e4e85dd444827d8af90c70255, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 2.53
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: b5c12e4e4e85dd444827d8af90c70255, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.132
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: b5c12e4e4e85dd444827d8af90c70255, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -5.46
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: b5c12e4e4e85dd444827d8af90c70255, type: 3}
       propertyPath: m_LocalRotation.w
@@ -3522,15 +3522,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3692054451093009619, guid: b5c12e4e4e85dd444827d8af90c70255, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.44
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3692054451093009619, guid: b5c12e4e4e85dd444827d8af90c70255, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.65
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3692054451093009619, guid: b5c12e4e4e85dd444827d8af90c70255, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0.15
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3697606312856488674, guid: b5c12e4e4e85dd444827d8af90c70255, type: 3}
       propertyPath: m_Enabled
@@ -3734,6 +3734,18 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 3562995307603986653}
     m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: b5c12e4e4e85dd444827d8af90c70255, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 3444066707949622013}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: b5c12e4e4e85dd444827d8af90c70255, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 6615544910089568567}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: b5c12e4e4e85dd444827d8af90c70255, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 5443673613195384504}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: b5c12e4e4e85dd444827d8af90c70255, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 8350497056727912358}
     - targetCorrespondingSourceObject: {fileID: 2107887168779189008, guid: b5c12e4e4e85dd444827d8af90c70255, type: 3}
       insertIndex: -1
       addedObject: {fileID: 5805942099039637300}
@@ -3751,28 +3763,13 @@ PrefabInstance:
       addedObject: {fileID: 6922104763016393597}
     - targetCorrespondingSourceObject: {fileID: 2107887168779189008, guid: b5c12e4e4e85dd444827d8af90c70255, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 5616655205062183198}
-    - targetCorrespondingSourceObject: {fileID: 2107887168779189008, guid: b5c12e4e4e85dd444827d8af90c70255, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 9121999222780784432}
-    - targetCorrespondingSourceObject: {fileID: 2107887168779189008, guid: b5c12e4e4e85dd444827d8af90c70255, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 4568727284715624978}
-    - targetCorrespondingSourceObject: {fileID: 2107887168779189008, guid: b5c12e4e4e85dd444827d8af90c70255, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1963132668618501425}
-    - targetCorrespondingSourceObject: {fileID: 2107887168779189008, guid: b5c12e4e4e85dd444827d8af90c70255, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 3361008822293523909}
+      addedObject: {fileID: 3026169541914003577}
     - targetCorrespondingSourceObject: {fileID: 8506500108117677875, guid: b5c12e4e4e85dd444827d8af90c70255, type: 3}
       insertIndex: -1
       addedObject: {fileID: 4480329140904178646}
     - targetCorrespondingSourceObject: {fileID: 8506500108117677875, guid: b5c12e4e4e85dd444827d8af90c70255, type: 3}
       insertIndex: -1
       addedObject: {fileID: 19620747642819882}
-    - targetCorrespondingSourceObject: {fileID: 8506500108117677875, guid: b5c12e4e4e85dd444827d8af90c70255, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1011701785395986327}
     - targetCorrespondingSourceObject: {fileID: 8506500108117677875, guid: b5c12e4e4e85dd444827d8af90c70255, type: 3}
       insertIndex: -1
       addedObject: {fileID: 3805755151064708304}
@@ -4050,125 +4047,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 33463d1b844a3b54492a2c200bec72ab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::FrictionCalculator
---- !u!114 &5616655205062183198
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2881839511789833260}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9a7679a6d41e77c488537d1589b56f77, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::PlayerInputHandler
-  moveAction:
-    m_Name: Move
-    m_Type: 0
-    m_ExpectedControlType: Vector2
-    m_Id: e9365c8c-8652-46fc-a037-560c6785a1c5
-    m_Processors: 
-    m_Interactions: 
-    m_SingletonActionBindings:
-    - m_Name: 2D Vector
-      m_Id: d5df78da-8164-4074-bad2-378ecbcb84a3
-      m_Path: 2DVector
-      m_Interactions: 
-      m_Processors: 
-      m_Groups: 
-      m_Action: Move
-      m_Flags: 4
-    - m_Name: up
-      m_Id: 9baca526-1066-46ff-9a60-87d50a8b91a2
-      m_Path: <Keyboard>/w
-      m_Interactions: 
-      m_Processors: 
-      m_Groups: 
-      m_Action: Move
-      m_Flags: 8
-    - m_Name: down
-      m_Id: 092b039e-122c-4922-a4ac-bb7fcc1b2076
-      m_Path: <Keyboard>/s
-      m_Interactions: 
-      m_Processors: 
-      m_Groups: 
-      m_Action: Move
-      m_Flags: 8
-    - m_Name: left
-      m_Id: d1d3cbe7-6638-4a09-af46-767afeb8e581
-      m_Path: <Keyboard>/a
-      m_Interactions: 
-      m_Processors: 
-      m_Groups: 
-      m_Action: Move
-      m_Flags: 8
-    - m_Name: right
-      m_Id: 19e9dc8b-0479-42a3-925c-bd8c77b6993b
-      m_Path: <Keyboard>/d
-      m_Interactions: 
-      m_Processors: 
-      m_Groups: 
-      m_Action: Move
-      m_Flags: 8
-    m_Flags: 0
-  recoverAction:
-    m_Name: Recover
-    m_Type: 0
-    m_ExpectedControlType: 
-    m_Id: c611be03-c6c4-4e12-a451-2ddde3bda48c
-    m_Processors: 
-    m_Interactions: 
-    m_SingletonActionBindings: []
-    m_Flags: 0
-  pauseAction:
-    m_Name: Pause
-    m_Type: 0
-    m_ExpectedControlType: 
-    m_Id: c5a0895e-0c17-4c1f-b71a-f2a121350bff
-    m_Processors: 
-    m_Interactions: 
-    m_SingletonActionBindings: []
-    m_Flags: 0
---- !u!114 &9121999222780784432
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2881839511789833260}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3371bb884d937a6499a6347d89396921, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::TankVehicle
-  CurrentStateName: 
-  AIBehaviour: {fileID: 0}
-  damageHandler: {fileID: 0}
-  deathHandler: {fileID: 0}
-  stats: {fileID: 0}
-  capsizethreshold: 0.1
-  stuckTimeout: 3
-  recoverCooldown: 10
---- !u!114 &4568727284715624978
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2881839511789833260}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 42ccd41e39da33d42920c1a06ff07a86, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::TankStats
-  maxHealth: 300
-  maxShield: 200
-  shield: 200
-  lives: 3
-  score: 0
-  capacitor: 100
-  battery: 100
---- !u!114 &1963132668618501425
+--- !u!114 &3026169541914003577
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -4180,29 +4059,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 15624f5a967b3484f90ca04cc4eb29b7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TankDamageHandler
---- !u!114 &3361008822293523909
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2881839511789833260}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 60dc7804fcbc0c44fbf75344926b39d0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::TankDeathHandler
-  explosionPrefab: {fileID: 2762338130192966092, guid: 5e2b37b4c0e69d44db0560a80175fb4c, type: 3}
-  parts:
-  - {fileID: 5638301023273601550}
-  - {fileID: 5427255797567561096}
-  turret: {fileID: 5526982398331969551}
-  root: {fileID: 3927007087389428333}
-  wreckageMat: {fileID: 13400000, guid: 91fc82ed398e4f041945858a34fea235, type: 2}
-  explosionForce: 20
-  addRandomRotation: 1
-  maxRandomTorque: 3
-  wreckageLayer: 0
+  stats: {fileID: 6615544910089568567}
+  stateMachine: {fileID: 3444066707949622013}
 --- !u!1 &2897708028773157052 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -7887953680927375488, guid: b5c12e4e4e85dd444827d8af90c70255, type: 3}
@@ -4250,6 +4108,86 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: b5c12e4e4e85dd444827d8af90c70255, type: 3}
   m_PrefabInstance: {fileID: 4233069130049451836}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &3444066707949622013
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3927007087389428333}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3371bb884d937a6499a6347d89396921, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TankVehicle
+  CurrentStateName: 
+  AIBehaviour: {fileID: 0}
+  damageHandler: {fileID: 0}
+  deathHandler: {fileID: 8350497056727912358}
+  stats: {fileID: 6615544910089568567}
+  body: {fileID: 2881839511789833260}
+  turret: {fileID: 5526982398331969551}
+  capsizethreshold: 0.1
+  stuckTimeout: 3
+  recoverCooldown: 10
+--- !u!114 &6615544910089568567
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3927007087389428333}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 42ccd41e39da33d42920c1a06ff07a86, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TankStats
+  maxHealth: 300
+  maxShield: 200
+  shield: 200
+  lives: 3
+  score: 0
+  capacitor: 100
+  maxCapacitor: 100
+  battery: 100
+  maxBattery: 3000
+--- !u!114 &5443673613195384504
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3927007087389428333}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b14d2fdfaccc6204e8aa0ebaf1e0eac5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::BatteryHandler
+  capacitorDischargeTimeSpan: 1
+  capacitorChargeTimeSpan: 5
+--- !u!114 &8350497056727912358
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3927007087389428333}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 60dc7804fcbc0c44fbf75344926b39d0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TankDeathHandler
+  explosionPrefab: {fileID: 2762338130192966092, guid: 5e2b37b4c0e69d44db0560a80175fb4c, type: 3}
+  parts:
+  - {fileID: 5638301023273601550}
+  - {fileID: 5427255797567561096}
+  turret: {fileID: 5526982398331969551}
+  root: {fileID: 3927007087389428333}
+  wreckageMat: {fileID: 13400000, guid: 91fc82ed398e4f041945858a34fea235, type: 2}
+  explosionForce: 20
+  addRandomRotation: 1
+  maxRandomTorque: 3
+  wreckageLayer: 0
 --- !u!1 &4081181610347853894 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 152459377975431034, guid: b5c12e4e4e85dd444827d8af90c70255, type: 3}
@@ -4632,80 +4570,6 @@ MonoBehaviour:
   maxTrajectoryTime: 5
   forceVector: {x: 0, y: 0, z: 0}
   isBalisticLine: 1
---- !u!114 &1011701785395986327
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5526982398331969551}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bae4952971e70af40842163119897f6e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::PlayerTurretInputs
-  fireAction:
-    m_Name: Fire
-    m_Type: 1
-    m_ExpectedControlType: Button
-    m_Id: 76ca982e-f5f0-435f-a09f-0661e1713924
-    m_Processors: 
-    m_Interactions: 
-    m_SingletonActionBindings:
-    - m_Name: 
-      m_Id: 2ee36bb7-c1ce-4895-97f2-f2845fdbd820
-      m_Path: <Mouse>/leftButton
-      m_Interactions: 
-      m_Processors: 
-      m_Groups: 
-      m_Action: Fire
-      m_Flags: 0
-    m_Flags: 0
-  cycleAction:
-    m_Name: Cycle
-    m_Type: 1
-    m_ExpectedControlType: Button
-    m_Id: dd27faa5-bab3-4d06-8732-7d842f05f60d
-    m_Processors: 
-    m_Interactions: 
-    m_SingletonActionBindings:
-    - m_Name: 
-      m_Id: 81e19f86-084d-402e-b208-f43014929027
-      m_Path: <Keyboard>/backspace
-      m_Interactions: 
-      m_Processors: 
-      m_Groups: 
-      m_Action: Cycle
-      m_Flags: 0
-    m_Flags: 0
-  scrollAction:
-    m_Name: Scroll
-    m_Type: 0
-    m_ExpectedControlType: Vector2
-    m_Id: be7e3317-f949-48ec-9970-70afb7b9e32e
-    m_Processors: 
-    m_Interactions: 
-    m_SingletonActionBindings:
-    - m_Name: 
-      m_Id: bb41251f-705c-4fc5-b988-195961c6ab2c
-      m_Path: <Mouse>/scroll
-      m_Interactions: 
-      m_Processors: 
-      m_Groups: 
-      m_Action: Scroll
-      m_Flags: 0
-    m_Flags: 0
-  digitAction:
-    m_Name: Digit
-    m_Type: 1
-    m_ExpectedControlType: Button
-    m_Id: fc389b4a-36b3-4a4a-bf13-9cc37b0c2750
-    m_Processors: 
-    m_Interactions: 
-    m_SingletonActionBindings: []
-    m_Flags: 0
-  scrollSensitivity: 1
-  mouseTarget: {fileID: 0}
 --- !u!114 &3805755151064708304
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4719,10 +4583,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BallisticTrajectory
   maxSegments: 50
-  lineWidth: 0.24
+  lineWidth: 0.025
   collisionMask:
     serializedVersion: 2
-    m_Bits: 2039
+    m_Bits: 14327
   crossPoint: {x: 0, y: 0, z: 0}
   isColidingEnemy: 0
   enemyLayerMask:

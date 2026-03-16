@@ -13,7 +13,7 @@ public class OperationalState : IState<TankVehicleFSM>
 
     private bool IsCapsized(TankVehicleFSM machine)
     {
-        isUpsideDown = machine.transform.up.y <= machine.capsizethreshold;
+        isUpsideDown = machine.body.transform.up.y <= machine.capsizethreshold;
         if (isUpsideDown) capsizedTimer += Time.deltaTime;
         else capsizedTimer = 0f;
         return capsizedTimer >= machine.stuckTimeout;

@@ -2,15 +2,8 @@ using UnityEngine;
 
 public class TankDamageHandler : MonoBehaviour, IDamagable
 {
-    private TankStats stats;
-    private TankVehicleFSM stateMachine;
-
-    void Awake()
-    {
-        stats = GetComponent<TankStats>();
-        stateMachine = GetComponent<TankVehicleFSM>();
-    }
-
+    public TankStats stats;
+    public TankVehicleFSM stateMachine;
     public int Health
     {
         get => stats.Health;
