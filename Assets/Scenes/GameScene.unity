@@ -1827,17 +1827,6 @@ Mesh:
       - serializedVersion: 1
         m_IndexStart: 0
         m_IndexCount: 0
---- !u!114 &222005343 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 3805755151064708304, guid: 469f97667f62bfe41b255b4e75783a8a, type: 3}
-  m_PrefabInstance: {fileID: 4689140587719603403}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2c7ebfaf8ad9e3946874bbc5c5d808a4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::BallisticTrajectory
 --- !u!1 &238090604
 GameObject:
   m_ObjectHideFlags: 0
@@ -3008,7 +2997,7 @@ Transform:
   m_GameObject: {fileID: 361838994}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 2.79, y: 0.33454, z: -1.0799999}
+  m_LocalPosition: {x: 0, y: 0, z: 1.605}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3026,7 +3015,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 153573ccf528f034f85cacd63c536646, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TankVisualInterestTarget
-  tank: {fileID: 658065108}
 --- !u!43 &365747053
 Mesh:
   m_ObjectHideFlags: 0
@@ -3654,7 +3642,6 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 2029888083}
   - {fileID: 1119336217}
   - {fileID: 410087041}
   - {fileID: 1890364481}
@@ -4194,11 +4181,6 @@ MonoBehaviour:
   m_SelectedFaces: 
   m_SelectedEdges: []
   m_SelectedVertices: 
---- !u!1 &658065108 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2881839511789833260, guid: 469f97667f62bfe41b255b4e75783a8a, type: 3}
-  m_PrefabInstance: {fileID: 4689140587719603403}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &695392837
 GameObject:
   m_ObjectHideFlags: 0
@@ -5326,7 +5308,7 @@ GameObject:
   m_Component:
   - component: {fileID: 841658303}
   m_Layer: 0
-  m_Name: -- player --
+  m_Name: -- player group--
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5341,12 +5323,14 @@ Transform:
   m_GameObject: {fileID: 841658302}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.05859, y: 1.38746, z: -0.41643}
+  m_LocalPosition: {x: 1.143, y: 1.38746, z: -6.421}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1851948493}
   - {fileID: 361838997}
+  - {fileID: 1090113809}
+  - {fileID: 2029888083}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &842422174 stripped
@@ -5380,15 +5364,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7215731488689646644, guid: fdf4183b2b20bef46942c16cb1e40856, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -5.3243017
+      value: -5.3213887
       objectReference: {fileID: 0}
     - target: {fileID: 7215731488689646644, guid: fdf4183b2b20bef46942c16cb1e40856, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.8574598
+      value: -1.050174
       objectReference: {fileID: 0}
     - target: {fileID: 7215731488689646644, guid: fdf4183b2b20bef46942c16cb1e40856, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 13.794949
+      value: 13.79561
       objectReference: {fileID: 0}
     - target: {fileID: 7215731488689646644, guid: fdf4183b2b20bef46942c16cb1e40856, type: 3}
       propertyPath: m_LocalRotation.w
@@ -5635,15 +5619,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7215731488689646644, guid: fdf4183b2b20bef46942c16cb1e40856, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -5.324913
+      value: -5.322
       objectReference: {fileID: 0}
     - target: {fileID: 7215731488689646644, guid: fdf4183b2b20bef46942c16cb1e40856, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.3060001
+      value: -0.0570693
       objectReference: {fileID: 0}
     - target: {fileID: 7215731488689646644, guid: fdf4183b2b20bef46942c16cb1e40856, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 13.788338
+      value: 13.789
       objectReference: {fileID: 0}
     - target: {fileID: 7215731488689646644, guid: fdf4183b2b20bef46942c16cb1e40856, type: 3}
       propertyPath: m_LocalRotation.w
@@ -6068,15 +6052,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7215731488689646644, guid: fdf4183b2b20bef46942c16cb1e40856, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -5.33
+      value: -5.327087
       objectReference: {fileID: 0}
     - target: {fileID: 7215731488689646644, guid: fdf4183b2b20bef46942c16cb1e40856, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.32
+      value: -0.5520901
       objectReference: {fileID: 0}
     - target: {fileID: 7215731488689646644, guid: fdf4183b2b20bef46942c16cb1e40856, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 13.48
+      value: 13.480661
       objectReference: {fileID: 0}
     - target: {fileID: 7215731488689646644, guid: fdf4183b2b20bef46942c16cb1e40856, type: 3}
       propertyPath: m_LocalRotation.w
@@ -6188,7 +6172,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CursorTarget
   dotCursorTexture: {fileID: 2800000, guid: cc600a562917e3445914016310a71125, type: 3}
-  trajectory: {fileID: 222005343}
+  trajectory: {fileID: 0}
   isLockedOnTarget: 0
 --- !u!4 &1013674130 stripped
 Transform:
@@ -6399,15 +6383,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7215731488689646644, guid: fdf4183b2b20bef46942c16cb1e40856, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -5.334913
+      value: -5.322
       objectReference: {fileID: 0}
     - target: {fileID: 7215731488689646644, guid: fdf4183b2b20bef46942c16cb1e40856, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.8574598
+      value: -1.050174
       objectReference: {fileID: 0}
     - target: {fileID: 7215731488689646644, guid: fdf4183b2b20bef46942c16cb1e40856, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 13.208338
+      value: 13.209
       objectReference: {fileID: 0}
     - target: {fileID: 7215731488689646644, guid: fdf4183b2b20bef46942c16cb1e40856, type: 3}
       propertyPath: m_LocalRotation.w
@@ -6548,6 +6532,243 @@ Transform:
   - {fileID: 170434679}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1090113808
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1090113809}
+  - component: {fileID: 1090113810}
+  - component: {fileID: 1090113812}
+  - component: {fileID: 1090113811}
+  m_Layer: 0
+  m_Name: Player
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1090113809
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1090113808}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 841658303}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1090113810
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1090113808}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 49c5515191519ca49a75f32e7d9573ef, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Player
+  score: 0
+  lives: 3
+  tankPrefab: {fileID: 3927007087389428333, guid: 469f97667f62bfe41b255b4e75783a8a, type: 3}
+  inputHandler: {fileID: 1090113812}
+  turretInputs: {fileID: 1090113811}
+--- !u!114 &1090113811
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1090113808}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bae4952971e70af40842163119897f6e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerTurretInputs
+  fireAction:
+    m_Name: Fire
+    m_Type: 1
+    m_ExpectedControlType: Button
+    m_Id: 76ca982e-f5f0-435f-a09f-0661e1713924
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings:
+    - m_Name: 
+      m_Id: 2ee36bb7-c1ce-4895-97f2-f2845fdbd820
+      m_Path: <Mouse>/leftButton
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Fire
+      m_Flags: 0
+    m_Flags: 0
+  cycleAction:
+    m_Name: Cycle
+    m_Type: 1
+    m_ExpectedControlType: Button
+    m_Id: dd27faa5-bab3-4d06-8732-7d842f05f60d
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings:
+    - m_Name: 
+      m_Id: 5fc27b16-95bd-4d16-b979-a1f0a0a52ba6
+      m_Path: <Keyboard>/space
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Cycle
+      m_Flags: 0
+    m_Flags: 0
+  scrollAction:
+    m_Name: Scroll
+    m_Type: 0
+    m_ExpectedControlType: Vector2
+    m_Id: be7e3317-f949-48ec-9970-70afb7b9e32e
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings:
+    - m_Name: 
+      m_Id: bb41251f-705c-4fc5-b988-195961c6ab2c
+      m_Path: <Mouse>/scroll
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Scroll
+      m_Flags: 0
+    m_Flags: 0
+  digitAction:
+    m_Name: Digit
+    m_Type: 1
+    m_ExpectedControlType: Button
+    m_Id: fc389b4a-36b3-4a4a-bf13-9cc37b0c2750
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings: []
+    m_Flags: 0
+  scrollSensitivity: 1
+  mouseTarget: {fileID: 2029888083}
+--- !u!114 &1090113812
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1090113808}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a7679a6d41e77c488537d1589b56f77, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerInputHandler
+  moveAction:
+    m_Name: Move
+    m_Type: 0
+    m_ExpectedControlType: Vector2
+    m_Id: e9365c8c-8652-46fc-a037-560c6785a1c5
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings:
+    - m_Name: 2D Vector
+      m_Id: d5df78da-8164-4074-bad2-378ecbcb84a3
+      m_Path: 2DVector
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Move
+      m_Flags: 4
+    - m_Name: up
+      m_Id: 9baca526-1066-46ff-9a60-87d50a8b91a2
+      m_Path: <Keyboard>/w
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Move
+      m_Flags: 8
+    - m_Name: down
+      m_Id: 092b039e-122c-4922-a4ac-bb7fcc1b2076
+      m_Path: <Keyboard>/s
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Move
+      m_Flags: 8
+    - m_Name: left
+      m_Id: d1d3cbe7-6638-4a09-af46-767afeb8e581
+      m_Path: <Keyboard>/a
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Move
+      m_Flags: 8
+    - m_Name: right
+      m_Id: 19e9dc8b-0479-42a3-925c-bd8c77b6993b
+      m_Path: <Keyboard>/d
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Move
+      m_Flags: 8
+    m_Flags: 0
+  turboAction:
+    m_Name: Turbo
+    m_Type: 1
+    m_ExpectedControlType: Button
+    m_Id: 933fe124-4a8f-4ce0-882d-8016d853fb51
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings:
+    - m_Name: 
+      m_Id: d0c0880d-ac33-4d3d-b300-f6f1c545c91c
+      m_Path: <Keyboard>/leftShift
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Turbo
+      m_Flags: 0
+    m_Flags: 0
+  recoverAction:
+    m_Name: Recover
+    m_Type: 1
+    m_ExpectedControlType: Button
+    m_Id: c611be03-c6c4-4e12-a451-2ddde3bda48c
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings:
+    - m_Name: 
+      m_Id: 2f5b667e-baa0-4ddf-8ae7-fff43a1cd618
+      m_Path: <Keyboard>/r
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Recover
+      m_Flags: 0
+    m_Flags: 0
+  pauseAction:
+    m_Name: Pause
+    m_Type: 1
+    m_ExpectedControlType: Button
+    m_Id: c5a0895e-0c17-4c1f-b71a-f2a121350bff
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings:
+    - m_Name: 
+      m_Id: 2c31779a-bac3-4a6c-b980-71714d96ca36
+      m_Path: <Keyboard>/escape
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Pause
+      m_Flags: 0
+    m_Flags: 0
 --- !u!43 &1100561150
 Mesh:
   m_ObjectHideFlags: 0
@@ -7155,15 +7376,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7215731488689646644, guid: fdf4183b2b20bef46942c16cb1e40856, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -5.319215
+      value: -5.316302
       objectReference: {fileID: 0}
     - target: {fileID: 7215731488689646644, guid: fdf4183b2b20bef46942c16cb1e40856, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.23145986
+      value: -0.5520901
       objectReference: {fileID: 0}
     - target: {fileID: 7215731488689646644, guid: fdf4183b2b20bef46942c16cb1e40856, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 14.103286
+      value: 14.103948
       objectReference: {fileID: 0}
     - target: {fileID: 7215731488689646644, guid: fdf4183b2b20bef46942c16cb1e40856, type: 3}
       propertyPath: m_LocalRotation.w
@@ -7669,15 +7890,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7215731488689646644, guid: fdf4183b2b20bef46942c16cb1e40856, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -5.309826
+      value: -5.306913
       objectReference: {fileID: 0}
     - target: {fileID: 7215731488689646644, guid: fdf4183b2b20bef46942c16cb1e40856, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.8574598
+      value: -1.050174
       objectReference: {fileID: 0}
     - target: {fileID: 7215731488689646644, guid: fdf4183b2b20bef46942c16cb1e40856, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 14.406675
+      value: 14.407337
       objectReference: {fileID: 0}
     - target: {fileID: 7215731488689646644, guid: fdf4183b2b20bef46942c16cb1e40856, type: 3}
       propertyPath: m_LocalRotation.w
@@ -13626,11 +13847,11 @@ Transform:
   m_GameObject: {fileID: 2029888080}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.12906003, y: 0.789, z: 0.29025996}
+  m_LocalPosition: {x: 0, y: 0, z: 2.625}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 496078002}
+  m_Father: {fileID: 841658303}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!43 &2065055639
 Mesh:
@@ -14767,6 +14988,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1011701785395986327, guid: 469f97667f62bfe41b255b4e75783a8a, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1011701785395986327, guid: 469f97667f62bfe41b255b4e75783a8a, type: 3}
       propertyPath: mouseTarget
       value: 
       objectReference: {fileID: 2029888083}
@@ -14820,19 +15045,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3927007087389428333, guid: 469f97667f62bfe41b255b4e75783a8a, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4410247307664658647, guid: 469f97667f62bfe41b255b4e75783a8a, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.976
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4410247307664658647, guid: 469f97667f62bfe41b255b4e75783a8a, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.438
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4410247307664658647, guid: 469f97667f62bfe41b255b4e75783a8a, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -5.92
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4410247307664658647, guid: 469f97667f62bfe41b255b4e75783a8a, type: 3}
       propertyPath: m_LocalRotation.w
@@ -14892,63 +15117,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5616655205062183198, guid: 469f97667f62bfe41b255b4e75783a8a, type: 3}
       propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5616655205062183198, guid: 469f97667f62bfe41b255b4e75783a8a, type: 3}
-      propertyPath: pauseAction.m_Name
-      value: Pause
-      objectReference: {fileID: 0}
-    - target: {fileID: 5616655205062183198, guid: 469f97667f62bfe41b255b4e75783a8a, type: 3}
-      propertyPath: pauseAction.m_Type
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5616655205062183198, guid: 469f97667f62bfe41b255b4e75783a8a, type: 3}
-      propertyPath: recoverAction.m_Name
-      value: Recover
-      objectReference: {fileID: 0}
-    - target: {fileID: 5616655205062183198, guid: 469f97667f62bfe41b255b4e75783a8a, type: 3}
-      propertyPath: recoverAction.m_Type
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5616655205062183198, guid: 469f97667f62bfe41b255b4e75783a8a, type: 3}
-      propertyPath: pauseAction.m_ExpectedControlType
-      value: Button
-      objectReference: {fileID: 0}
-    - target: {fileID: 5616655205062183198, guid: 469f97667f62bfe41b255b4e75783a8a, type: 3}
-      propertyPath: recoverAction.m_ExpectedControlType
-      value: Button
-      objectReference: {fileID: 0}
-    - target: {fileID: 5616655205062183198, guid: 469f97667f62bfe41b255b4e75783a8a, type: 3}
-      propertyPath: pauseAction.m_SingletonActionBindings.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5616655205062183198, guid: 469f97667f62bfe41b255b4e75783a8a, type: 3}
-      propertyPath: recoverAction.m_SingletonActionBindings.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5616655205062183198, guid: 469f97667f62bfe41b255b4e75783a8a, type: 3}
-      propertyPath: pauseAction.m_SingletonActionBindings.Array.data[0].m_Id
-      value: 79f409dd-5c0d-4ec5-ba5d-1e2652a04a54
-      objectReference: {fileID: 0}
-    - target: {fileID: 5616655205062183198, guid: 469f97667f62bfe41b255b4e75783a8a, type: 3}
-      propertyPath: pauseAction.m_SingletonActionBindings.Array.data[0].m_Path
-      value: <Keyboard>/escape
-      objectReference: {fileID: 0}
-    - target: {fileID: 5616655205062183198, guid: 469f97667f62bfe41b255b4e75783a8a, type: 3}
-      propertyPath: recoverAction.m_SingletonActionBindings.Array.data[0].m_Id
-      value: d39598c3-1770-48f1-a737-2b26cb800b30
-      objectReference: {fileID: 0}
-    - target: {fileID: 5616655205062183198, guid: 469f97667f62bfe41b255b4e75783a8a, type: 3}
-      propertyPath: pauseAction.m_SingletonActionBindings.Array.data[0].m_Action
-      value: Pause
-      objectReference: {fileID: 0}
-    - target: {fileID: 5616655205062183198, guid: 469f97667f62bfe41b255b4e75783a8a, type: 3}
-      propertyPath: recoverAction.m_SingletonActionBindings.Array.data[0].m_Path
-      value: <Keyboard>/r
-      objectReference: {fileID: 0}
-    - target: {fileID: 5616655205062183198, guid: 469f97667f62bfe41b255b4e75783a8a, type: 3}
-      propertyPath: recoverAction.m_SingletonActionBindings.Array.data[0].m_Action
-      value: Recover
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5700024608731716275, guid: 469f97667f62bfe41b255b4e75783a8a, type: 3}
       propertyPath: mouseTarget

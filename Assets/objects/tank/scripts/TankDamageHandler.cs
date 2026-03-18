@@ -23,24 +23,21 @@ public class TankDamageHandler : MonoBehaviour, IDamagable
                 {
                     stats.Health += stats.shield;
                     stats.shield = 0;
-                    GameEvents.OnHealthUpdate.Invoke((float)stats.Health / stats.maxHealth);
+                    if (gameObject.tag == "Player") GameEvents.OnHealthUpdate.Invoke((float)stats.Health / stats.maxHealth);
                 }
-                GameEvents.OnShieldUpdate.Invoke((float)stats.shield / stats.maxShield);
+                else if (gameObject.tag == "Player") GameEvents.OnShieldUpdate.Invoke((float)stats.shield / stats.maxShield);
             }
             else
             {
                 stats.Health -= d.damage;
-                GameEvents.OnHealthUpdate.Invoke((float)stats.Health / stats.maxHealth);
+                if (gameObject.tag == "Player") GameEvents.OnHealthUpdate.Invoke((float)stats.Health / stats.maxHealth);
             }
-
         }
-            
 
         if (stats.Health <= 0)
         {
             stateMachine.ChangeState(new DeathState());
-            GameEvents.OnHealthUpdate.Invoke(0f);
+            if (gameObject.tag == "Player") GameEvents.OnHealthUpdate.Invoke(0f);
         }
-            
     }
 }

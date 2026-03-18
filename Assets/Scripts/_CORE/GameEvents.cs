@@ -13,7 +13,4 @@ public static class GameEvents
     public static Event<float> OnCapacitorUpdate = new Event<float>();
     public static Event<float> OnBatteryUpdate = new Event<float>();
     
-    public static Event<int> OnPlayerScored = new Event<int>();
-    public static Event<bool> OnTurboToggled = new Event<bool>();
-    public static Event<bool> OnMoveInputsToggled = new Event<bool>();
 }

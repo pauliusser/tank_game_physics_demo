@@ -21,12 +21,12 @@ public class TankStats : MonoBehaviour
     void OnEnable()
     {
         GameEvents.OnPlayerDied.Subscribe(PlayerDied);
-        GameEvents.OnPlayerScored.Subscribe(PlayerScored);
+        PlayerEvents.OnPlayerScored.Subscribe(PlayerScored);
     }
     void OnDisable()
     {
         GameEvents.OnPlayerDied.Unsubscribe(PlayerDied);
-        GameEvents.OnPlayerScored.Unsubscribe(PlayerScored);
+        PlayerEvents.OnPlayerScored.Unsubscribe(PlayerScored);
     }
     void PlayerDied()
     {
@@ -41,5 +41,7 @@ public class TankStats : MonoBehaviour
     void Start()
     {
         GameEvents.OnRefreshHUD.Invoke();
+        capacitor = maxCapacitor;
+        battery = maxBattery;
     }
 }

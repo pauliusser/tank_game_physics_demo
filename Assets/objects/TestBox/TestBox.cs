@@ -26,7 +26,7 @@ public class TestBox : MonoBehaviour, IDamagable
             Destroy(gameObject);
             if(d.source.tag == "Player")
             {
-                GameEvents.OnPlayerScored.Invoke(score);
+                PlayerEvents.OnPlayerScored.Invoke(score);
             }
         }
         UpdateTint();

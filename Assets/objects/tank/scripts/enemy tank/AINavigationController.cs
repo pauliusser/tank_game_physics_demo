@@ -4,12 +4,13 @@ using System.Collections;
 
 public class AINavigationController : MonoBehaviour
 {
+    public GameObject tankBody;
     [Header("Target")]
     public Transform navTarget;
 
     [Header("Pathfinding")]
     public float updateSpeed = 0.1f;
-    public float stoppingDistance = 2f;
+    public float stoppingDistance = 0.5f;
 
     [Header("Steering")]
     public float facingThreshold = 5f;
@@ -24,13 +25,19 @@ public class AINavigationController : MonoBehaviour
     private bool isBackingUp;
     private float backupTimer;
     private NavMeshPath aiPath;       // for debug
+    private TankMovement tankMovement;
 
     private void Awake()
     {
-        drivableVehicle = GetComponent<IDrivable>();
-        if (drivableVehicle == null)
+        if (tankBody != null)
         {
-            Debug.LogError("AIController: No component implementing IDrivable found on " + gameObject.name);
+            drivableVehicle = tankBody.GetComponent<IDrivable>();
+            tankMovement = tankBody.GetComponent<TankMovement>();
+            tankMovement.accelerationFactor = 6f;
+        }
+        else
+        {
+            Debug.LogError("AIController: No component implementing IDrivable found");
         }
     }
 
@@ -87,7 +94,7 @@ public class AINavigationController : MonoBehaviour
             if (navTarget != null)
             {
                 // Sample positions on NavMesh
-                Vector3 startPos = transform.position;
+                Vector3 startPos = tankBody.transform.position;
                 if (NavMesh.SamplePosition(startPos, out startHit, 2f, NavMesh.AllAreas))
                     startPos = startHit.position;
 
@@ -99,7 +106,7 @@ public class AINavigationController : MonoBehaviour
                 {
                     aiPath = path;
 
-                    Vector3 nextTarget = transform.position;
+                    Vector3 nextTarget = tankBody.transform.position;
                     if (path.corners.Length > 1)
                         nextTarget = path.corners[1];
                     else if (path.corners.Length == 1)
@@ -119,11 +126,11 @@ public class AINavigationController : MonoBehaviour
 
     private Vector2 CalculateAIMovement(Vector3 nextCorner)
     {
-        float distanceToFinal = navTarget != null ? Vector3.Distance(transform.position, navTarget.position) : float.MaxValue;
-        float distanceToNext = Vector3.Distance(transform.position, nextCorner);
+        float distanceToFinal = navTarget != null ? Vector3.Distance(tankBody.transform.position, navTarget.position) : float.MaxValue;
+        float distanceToNext = Vector3.Distance(tankBody.transform.position, nextCorner);
 
-        Vector3 tankForwardFlat = Vector3.ProjectOnPlane(transform.forward, Vector3.up).normalized;
-        Vector3 directionToNextFlat = Vector3.ProjectOnPlane((nextCorner - transform.position), Vector3.up).normalized;
+        Vector3 tankForwardFlat = Vector3.ProjectOnPlane(tankBody.transform.forward, Vector3.up).normalized;
+        Vector3 directionToNextFlat = Vector3.ProjectOnPlane((nextCorner - tankBody.transform.position), Vector3.up).normalized;
 
         float angle = Vector3.SignedAngle(tankForwardFlat, directionToNextFlat, Vector3.up);
         float absAngle = Mathf.Abs(angle);
@@ -172,13 +179,13 @@ public class AINavigationController : MonoBehaviour
         {
             Vector3 nextTarget = aiPath.corners.Length > 1 ? aiPath.corners[1] : aiPath.corners[0];
             Gizmos.color = Color.blue;
-            Gizmos.DrawLine(transform.position, nextTarget);
+            Gizmos.DrawLine(tankBody.transform.position, nextTarget);
 
             Gizmos.color = Color.yellow;
-            Vector3 right = Quaternion.Euler(0, facingThreshold, 0) * transform.forward;
-            Vector3 left = Quaternion.Euler(0, -facingThreshold, 0) * transform.forward;
-            Gizmos.DrawRay(transform.position, right * 2f);
-            Gizmos.DrawRay(transform.position, left * 2f);
+            Vector3 right = Quaternion.Euler(0, facingThreshold, 0) * tankBody.transform.forward;
+            Vector3 left = Quaternion.Euler(0, -facingThreshold, 0) * tankBody.transform.forward;
+            Gizmos.DrawRay(tankBody.transform.position, right * 2f);
+            Gizmos.DrawRay(tankBody.transform.position, left * 2f);
         }
     }
     public void NavigateTo(Transform goal)

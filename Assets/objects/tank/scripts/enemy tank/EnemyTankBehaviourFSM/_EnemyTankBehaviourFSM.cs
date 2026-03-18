@@ -40,6 +40,7 @@ public class EnemyTankBehaviourFSM : MonoBehaviour
     {
         if (navController == null) navController = tankBody.GetComponent<AINavigationController>();
         if (turretInputs == null) turretInputs = tankTurret.GetComponent<AITurretController>();
+        navController.stoppingDistance = arivalDistance;
         turretSettings = tankTurret.GetComponent<TankTurret>();
         homepoint = CreateHomepoint(0.2f);
         
@@ -55,7 +56,7 @@ public class EnemyTankBehaviourFSM : MonoBehaviour
     Transform CreateHomepoint(float height)
     {
         RaycastHit hit;
-        Vector3 rayStart = transform.position;
+        Vector3 rayStart = tankBody.transform.position;
         if (Physics.Raycast(rayStart, Vector3.down, out hit, Mathf.Infinity, groundLayerMask))
         {
             Vector3 homepointPosition = hit.point + new Vector3(0f, height, 0f);

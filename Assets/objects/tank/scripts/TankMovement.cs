@@ -462,7 +462,8 @@ public class TankMovement : MonoBehaviour, IDrivable
     public Vector3 centerOfMass = Vector3.zero;
     public float mass = 100f;
     public float turnMultiplier = 1f;
-    public float maxTrackAcceleration = 5f;
+    public float accelerationFactor = 5f;
+    public float decelerationFactor = 6f;
     public LayerMask groundLayerMask;
 
     // IDrivable implementation
@@ -581,7 +582,12 @@ public class TankMovement : MonoBehaviour, IDrivable
         }
 
         float currentSpeed = track.isRight ? currentTrackSpeedD : currentTrackSpeedK;
-        float maxDelta = maxTrackAcceleration * Time.fixedDeltaTime;
+        float maxDelta = accelerationFactor * Time.fixedDeltaTime;
+        if (Mathf.Abs(DriveX + DriveX) == 0f)
+        {
+            maxDelta = decelerationFactor * Time.fixedDeltaTime;
+        }
+        
         float newSpeed = Mathf.MoveTowards(currentSpeed, desiredTrackInput, maxDelta);
 
         if (track.isRight)

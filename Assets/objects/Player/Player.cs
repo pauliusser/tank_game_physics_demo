@@ -35,6 +35,13 @@ public class Player : MonoBehaviour
         currentTank.transform.SetParent(transform.parent);
 
         PlayerEvents.OnTankSpawn.Invoke(currentTank);
+
+        TankInstanceSetUp tankSetUp = GetComponent<TankInstanceSetUp>();
+        if (tankSetUp != null) 
+        {
+            tankSetUp.tankInstance = currentTank;
+            tankSetUp.SetUpTank();
+        }
         
         // Get interfaces
         

@@ -10,6 +10,7 @@ public class PlayerInputHandler : MonoBehaviour
     public InputAction pauseAction;
     private IDrivable drivableVehicle;
     private TankVehicleFSM fsm;
+    private TankPowerHandler powerHandler;
     private bool didHaveMoveInput = false;
 
     public void SetTarget(IDrivable currentDrivable, TankVehicleFSM currentFSM)
@@ -17,6 +18,7 @@ public class PlayerInputHandler : MonoBehaviour
         drivableVehicle = currentDrivable;
         fsm = currentFSM;
     }
+
 
     private void OnEnable()
     {
@@ -32,6 +34,7 @@ public class PlayerInputHandler : MonoBehaviour
         fsm = GetComponent<TankVehicleFSM>();
 
         GameEvents.OnPauseToggled.Subscribe(TogglePause);
+        PlayerEvents.OnTankSpawn.Subscribe(SetPowerHandler);
     }
     private void OnDisable()
     {
@@ -45,14 +48,21 @@ public class PlayerInputHandler : MonoBehaviour
         turboAction.canceled -= OnTurboCanceled;
 
         GameEvents.OnPauseToggled.Unsubscribe(TogglePause);
+        PlayerEvents.OnTankSpawn.Unsubscribe(SetPowerHandler);
     }
+
+    private void SetPowerHandler(GameObject tank)
+    {
+        powerHandler = tank.GetComponent<TankPowerHandler>();
+    }
+
     private void OnTurboPerformed(InputAction.CallbackContext ctx)
     {
-        GameEvents.OnTurboToggled.Invoke(true);
+        powerHandler.SetTurbo(true);
     }
     private void OnTurboCanceled(InputAction.CallbackContext ctx)
     {
-        GameEvents.OnTurboToggled.Invoke(false);
+        powerHandler.SetTurbo(false);
     }
     private void OnRecoverPerformed(InputAction.CallbackContext ctx)
     {
@@ -68,19 +78,9 @@ public class PlayerInputHandler : MonoBehaviour
         
     }
 
-    // private void Awake()
-    // {
-    //     // Get the first component that implements IDrivable on this GameObject
-    //     drivableVehicle = GetComponent<IDrivable>();
-    //     if (drivableVehicle == null)
-    //     {
-    //         Debug.LogError("PlayerInputHandler: No component implementing IDrivable found on " + gameObject.name);
-    //     }
-    // }
-
     private void Update()
     {
-        if (drivableVehicle == null) return;
+        if (drivableVehicle == null || powerHandler == null) return;
 
         Vector2 rawInput = moveAction.ReadValue<Vector2>();
         // Round for digital tank controls (keyboard)
@@ -90,11 +90,11 @@ public class PlayerInputHandler : MonoBehaviour
         drivableVehicle.DriveX = inpX;
         drivableVehicle.DriveY = inpY;
 
-        bool hasMoveInput = (inpX + inpY) > 0;
+        bool hasMoveInput = Mathf.Abs(inpX + inpY) > 0;
 
         if (hasMoveInput != didHaveMoveInput)
         {
-            GameEvents.OnMoveInputsToggled.Invoke(hasMoveInput);
+            powerHandler.SetMove(hasMoveInput);
         }
 
         didHaveMoveInput = hasMoveInput;
