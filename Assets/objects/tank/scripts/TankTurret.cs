@@ -40,6 +40,7 @@ public class TankTurret : MonoBehaviour, ITurretControllable
     [Header("Projectile Types")]
     public GameObject damageSourceObject;
     public ProjectileConfig[] projectiles;         // array of available projectile types
+    public float damageMultiplier = 1f;
 
     [Header("Debug")]
     public bool drawTrajectory = true;
@@ -133,7 +134,7 @@ public class TankTurret : MonoBehaviour, ITurretControllable
             var kinetic = projectile.GetComponent<KineticProjectile>();
             if (kinetic != null) 
             {
-                kinetic.kineticDmg = currentProjectile.damage;
+                kinetic.kineticDmg = (int) (currentProjectile.damage * damageMultiplier);
                 kinetic.damageSource = damageSourceObject;
             }
         }
@@ -142,7 +143,7 @@ public class TankTurret : MonoBehaviour, ITurretControllable
             var explosive = projectile.GetComponent<ExplosiveProjectile>();
             if (explosive != null)
             {
-                explosive.blastDmg = currentProjectile.damage;
+                explosive.blastDmg = (int) (currentProjectile.damage * damageMultiplier);
                 explosive.damageSource = damageSourceObject;
             }
         }

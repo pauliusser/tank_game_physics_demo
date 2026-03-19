@@ -20,6 +20,7 @@ public class TestBox : MonoBehaviour, IDamagable
         Debug.Log($"current health {Health}");
         if (d.type == "kinetic") Health -= d.damage;
         if (d.type == "explosive") Health -= d.damage;
+        if (d.type == "death volume") Health = 0;
         // Debug.Log($"damage: {d.damage} health: {Health} type: {d.type} source: {d.source}");
         if (Health <= 0) 
         {

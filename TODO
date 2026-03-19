@@ -10,7 +10,8 @@ UI dizainas:
 Managers:
     ✔ gameManager @done(26-03-13 23:22)
     ✔ eventsManager @done(26-03-13 23:22)
-    events:
+game manager:
+    ☐ game over state
         
 AI:
     ☐ ai obstacle avoidance 
@@ -18,14 +19,14 @@ AI:
 Tank:
     ☐ šaudymo atstumo ribojimas
     ☐ atotranka
-    ☐ turbo                       SHIFT mygtukas
+    ✔ turbo                       SHIFT mygtukas @done(26-03-19 13:16)
     ☐ ICollectable interfeisas    E mygtukas equip
         ☐ gyvybės
         ☐ šarvai
         ☐ baterijos
     ✔ capsize detection @done(26-03-04 01:05)
     ✔ recovery mechanika          R mygtukas recover @done(26-03-04 01:05)
-    ☐ recharge mechanika
+    ✔ recharge mechanika @done(26-03-19 13:16)
     model overhaul:
         ☐ kebulas
         ☐ šarvai

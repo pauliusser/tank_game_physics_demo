@@ -4126,7 +4126,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::TankVehicle
   CurrentStateName: 
   AIBehaviour: {fileID: 0}
-  damageHandler: {fileID: 0}
+  damageHandler: {fileID: 3026169541914003577}
   deathHandler: {fileID: 8350497056727912358}
   stats: {fileID: 6615544910089568567}
   body: {fileID: 2881839511789833260}
@@ -4622,7 +4622,7 @@ MonoBehaviour:
   defaultAimOffset: 2
   minAimOffset: 0.5
   maxAimOffset: 20
-  damageSourceObject: {fileID: 2881839511789833260}
+  damageSourceObject: {fileID: 3927007087389428333}
   projectiles:
   - prefab: {fileID: 3529076035160440060, guid: 5e10f1df6f2a76645b765a513728aa62, type: 3}
     damage: 34
@@ -4630,6 +4630,7 @@ MonoBehaviour:
   - prefab: {fileID: 3529076035160440060, guid: 7c49c84c121cf4548b4fe91b108c7945, type: 3}
     damage: 51
     isKinetic: 0
+  damageMultiplier: 1
   drawTrajectory: 0
   trajectoryColor: {r: 0, g: 1, b: 0, a: 1}
   aimLineColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}

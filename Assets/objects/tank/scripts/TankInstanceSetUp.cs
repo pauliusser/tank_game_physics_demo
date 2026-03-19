@@ -4,7 +4,9 @@ public class TankInstanceSetUp : MonoBehaviour
 {
     public GameObject tankInstance;
     public LayerMask tankLayerMask;
-    public string tankBodyTag;
+    public string tankTag;
+    public int maxHealth = 100;
+    public float firePowerMultiplier = 1f;
     public Material tankMaterial;
     private TankRefs refs;
     private GameObject[] meshColliders;
@@ -24,14 +26,18 @@ public class TankInstanceSetUp : MonoBehaviour
             Debug.LogError($"TankInstanceSetUp: TankRefs component not found on {tankInstance.name}!");
             return;
         }
+        tankInstance.tag = tankTag;
+        tankInstance.GetComponent<TankStats>().maxHealth = maxHealth;
         refs = tankInstance.GetComponent<TankRefs>();
+        refs.turret.GetComponent<TankTurret>().damageMultiplier = firePowerMultiplier;
+        tankInstance.GetComponent<TankDeathHandler>().tankTag = tankTag;
         meshColliders = refs.meshColliders;
         coloredPars = refs.coloredPars;
         SetLayer();
         SetMaterial();
-        if (!string.IsNullOrEmpty(tankBodyTag) && refs.body != null)
+        if (!string.IsNullOrEmpty(tankTag) && refs.body != null)
         {
-            refs.body.tag = tankBodyTag;
+            refs.body.tag = tankTag;
         }
     }
     private void SetLayer()

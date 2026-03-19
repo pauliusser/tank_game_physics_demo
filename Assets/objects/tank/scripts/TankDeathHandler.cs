@@ -2,6 +2,7 @@ using UnityEngine;
 
 public class TankDeathHandler : MonoBehaviour
 {
+    public string tankTag;
     [Header("Explosion")]
     public GameObject explosionPrefab;
 
@@ -31,7 +32,7 @@ public class TankDeathHandler : MonoBehaviour
     {
         if (hasDied) return;
         hasDied = true;
-        GameEvents.OnPlayerDied.Invoke();
+        if (tankTag == "Player") PlayerEvents.OnPlayerDied.Invoke();
 
         DisableAI();
         Explode();

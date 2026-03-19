@@ -32,6 +32,15 @@ public class TankDamageHandler : MonoBehaviour, IDamagable
                 stats.Health -= d.damage;
                 if (gameObject.tag == "Player") GameEvents.OnHealthUpdate.Invoke((float)stats.Health / stats.maxHealth);
             }
+        } else if (d.type == "death volume")
+        {
+            stats.Health = 0;
+            stats.shield = 0;
+            if (gameObject.tag == "Player")
+            {
+                GameEvents.OnHealthUpdate.Invoke(0f);
+                GameEvents.OnShieldUpdate.Invoke(0f);
+            }
         }
 
         if (stats.Health <= 0)

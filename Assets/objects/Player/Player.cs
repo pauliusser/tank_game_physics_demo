@@ -18,7 +18,15 @@ public class Player : MonoBehaviour
     // Input handlers
     [SerializeField] private PlayerInputHandler inputHandler;
     [SerializeField] private PlayerTurretInputs turretInputs;
-    
+    void OnEnable()
+    {
+        PlayerEvents.OnPlayerDied.Subscribe(OnTankDestroyed);
+    }
+    void OnDisable()
+    {
+        PlayerEvents.OnPlayerDied.Unsubscribe(OnTankDestroyed);
+    }
+
     private void Start()
     {
         inputHandler = GetComponent<PlayerInputHandler>();
@@ -65,7 +73,7 @@ public class Player : MonoBehaviour
         else
         {
             Debug.Log("Game Over");
-            // Game over logic here
+            GameEvents.OnGameOver.Invoke();
         }
     }
 }

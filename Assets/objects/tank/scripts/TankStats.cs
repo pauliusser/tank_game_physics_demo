@@ -20,12 +20,17 @@ public class TankStats : MonoBehaviour
     }
     void OnEnable()
     {
-        GameEvents.OnPlayerDied.Subscribe(PlayerDied);
+        PlayerEvents.OnPlayerDied.Subscribe(PlayerDied);
         PlayerEvents.OnPlayerScored.Subscribe(PlayerScored);
+        if (gameObject.tag == "Player")
+        {
+            GameEvents.OnHealthUpdate.Invoke(1);
+            GameEvents.OnShieldUpdate.Invoke(1);
+        }
     }
     void OnDisable()
     {
-        GameEvents.OnPlayerDied.Unsubscribe(PlayerDied);
+        PlayerEvents.OnPlayerDied.Unsubscribe(PlayerDied);
         PlayerEvents.OnPlayerScored.Unsubscribe(PlayerScored);
     }
     void PlayerDied()

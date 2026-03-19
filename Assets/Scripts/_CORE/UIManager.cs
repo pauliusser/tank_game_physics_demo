@@ -19,6 +19,7 @@ public class UIManager : MonoBehaviour
 
     public GameObject HUD;
     public UIDocument pause;
+    public UIDocument gameOver;
 
     
     public void ShowPause()
@@ -29,6 +30,9 @@ public class UIManager : MonoBehaviour
     {
         pause.enabled = false;
     }
-    
+    public void ShowGameOver()
+    {
+        gameOver.enabled = true;
+    }
 
 }

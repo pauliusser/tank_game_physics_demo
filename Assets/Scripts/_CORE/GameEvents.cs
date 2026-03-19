@@ -2,7 +2,7 @@ public static class GameEvents
 {
     public static Event OnGameStart = new Event();
     public static Event OnPauseToggled = new Event();
-    public static Event OnPlayerDied = new Event();
+    public static Event OnGameOver = new Event();
 
 
     public static Event OnRefreshHUD = new Event();

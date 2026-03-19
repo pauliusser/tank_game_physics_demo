@@ -34,14 +34,14 @@ public class GameManager : MonoBehaviour
     private void OnEnable()
     {
         GameEvents.OnGameStart.Subscribe(StartGame);
-        GameEvents.OnPlayerDied.Subscribe(GameOver);
+        GameEvents.OnGameOver.Subscribe(GameOver);
         GameEvents.OnPauseToggled.Subscribe(TogglePause);
     }
 
     private void OnDisable()
     {
         GameEvents.OnGameStart.Subscribe(StartGame);
-        GameEvents.OnPlayerDied.Subscribe(GameOver);
+        GameEvents.OnGameOver.Subscribe(GameOver);
         GameEvents.OnPauseToggled.Subscribe(TogglePause);
     }
 
@@ -77,7 +77,7 @@ public class GameManager : MonoBehaviour
                 UIManager.Instance.ShowPause();
                 break;
             case GameState.GameOver:
-                // UIManager.Instance.ShowGameOver();
+                UIManager.Instance.ShowGameOver();
                 break;
         }
     }
