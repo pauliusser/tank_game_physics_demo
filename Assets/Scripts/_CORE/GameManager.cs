@@ -28,7 +28,7 @@ public class GameManager : MonoBehaviour
         GameOver
     }
 
-
+    public bool isRestart = false;
     public GameState CurrentState { get; private set; }
 
     private void OnEnable()
@@ -36,18 +36,21 @@ public class GameManager : MonoBehaviour
         GameEvents.OnGameStart.Subscribe(StartGame);
         GameEvents.OnGameOver.Subscribe(GameOver);
         GameEvents.OnPauseToggled.Subscribe(TogglePause);
+        GameEvents.OnEnterMainMenu.Subscribe(EnterMainMenu);
     }
 
     private void OnDisable()
     {
-        GameEvents.OnGameStart.Subscribe(StartGame);
-        GameEvents.OnGameOver.Subscribe(GameOver);
-        GameEvents.OnPauseToggled.Subscribe(TogglePause);
+        GameEvents.OnGameStart.Unsubscribe(StartGame);
+        GameEvents.OnGameOver.Unsubscribe(GameOver);
+        GameEvents.OnPauseToggled.Unsubscribe(TogglePause);
+        GameEvents.OnEnterMainMenu.Unsubscribe(EnterMainMenu);
     }
 
     private void StartGame() => SetState(GameState.Playing);
     private void GameOver() => SetState(GameState.GameOver);
     private void TogglePause() => SetState(CurrentState == GameState.Playing ? GameState.Paused : GameState.Playing);
+    private void EnterMainMenu() => SetState(GameState.MainMenu);
 
     private void SetState(GameState newState)
     {
@@ -63,11 +66,12 @@ public class GameManager : MonoBehaviour
         switch(state)
         {
             case GameState.MainMenu:
-                // UIManager.ShowMenu();
+                SceneManager.LoadScene("MenuScene");
                 break;
             case GameState.Playing:
-                if (SceneManager.GetActiveScene().name != "GameScene")
+                if (SceneManager.GetActiveScene().name != "GameScene" || isRestart)
                 {
+                    isRestart = false;
                     SceneManager.LoadScene("GameScene");
                 }
                 break;

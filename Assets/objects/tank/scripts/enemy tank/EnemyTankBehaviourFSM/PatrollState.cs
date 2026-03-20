@@ -50,7 +50,7 @@ public class PatrolState : IState<EnemyTankBehaviourFSM>
         Collider[] hits = new Collider[20];
         int count = Physics.OverlapSphereNonAlloc
         (
-            machine.tankBody.transform.position,
+            machine.tankTurret.transform.position,
             machine.detectionRadius,
             hits,
             machine.targetLayerMask

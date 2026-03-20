@@ -18,31 +18,7 @@ public class TankStats : MonoBehaviour
     {
         Health = maxHealth;
     }
-    void OnEnable()
-    {
-        PlayerEvents.OnPlayerDied.Subscribe(PlayerDied);
-        PlayerEvents.OnPlayerScored.Subscribe(PlayerScored);
-        if (gameObject.tag == "Player")
-        {
-            GameEvents.OnHealthUpdate.Invoke(1);
-            GameEvents.OnShieldUpdate.Invoke(1);
-        }
-    }
-    void OnDisable()
-    {
-        PlayerEvents.OnPlayerDied.Unsubscribe(PlayerDied);
-        PlayerEvents.OnPlayerScored.Unsubscribe(PlayerScored);
-    }
-    void PlayerDied()
-    {
-        lives -= 1;
-        GameEvents.OnLivesUpdate.Invoke(lives);
-    }
-    void PlayerScored(int points)
-    {
-        score += points;
-        GameEvents.OnScoreUpdate.Invoke(score);
-    }
+
     void Start()
     {
         GameEvents.OnRefreshHUD.Invoke();

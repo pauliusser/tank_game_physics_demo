@@ -3497,6 +3497,7 @@ GameObject:
   m_Component:
   - component: {fileID: 435433059}
   - component: {fileID: 435433060}
+  - component: {fileID: 435433061}
   m_Layer: 0
   m_Name: UI_Pause
   m_TagString: Untagged
@@ -3542,6 +3543,18 @@ MonoBehaviour:
   m_PivotReferenceSize: 0
   m_Pivot: 0
   m_WorldSpaceCollider: {fileID: 0}
+--- !u!114 &435433061
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 435433058}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 98d68b8d81f60424bb2e63aaf8aaff8a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PauseScreen
 --- !u!1 &445203438
 GameObject:
   m_ObjectHideFlags: 0
@@ -4289,7 +4302,6 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 788780895}
   - {fileID: 1578766202}
   - {fileID: 1105270409}
   - {fileID: 1776093961}
@@ -4368,6 +4380,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3ecdccacd0858b9498a1ca2b3f93ec93, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GameManager
+  isRestart: 0
 --- !u!4 &699127695
 Transform:
   m_ObjectHideFlags: 0
@@ -5310,12 +5323,12 @@ Transform:
   m_GameObject: {fileID: 788780894}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.4, y: -9.04, z: 0.9}
+  m_LocalPosition: {x: -0.28564, y: -7.65254, z: 8.41811}
   m_LocalScale: {x: 2.23, y: 1, z: 5.25}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1683968062}
-  m_Father: {fileID: 695392838}
+  m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!64 &788780896
 MeshCollider:
@@ -6775,6 +6788,7 @@ MonoBehaviour:
   score: 0
   lives: 3
   tankPrefab: {fileID: 3927007087389428333, guid: 469f97667f62bfe41b255b4e75783a8a, type: 3}
+  respawnTime: 1
   inputHandler: {fileID: 1090113812}
   turretInputs: {fileID: 1090113811}
 --- !u!114 &1090113811
@@ -6980,8 +6994,9 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 1024
   tankTag: Player
-  maxHealth: 100
+  maxHealth: 300
   firePowerMultiplier: 1
+  scoreValue: 0
   tankMaterial: {fileID: 2100000, guid: 1fbadb8e93d64584c9aef0c3eae9eb4a, type: 2}
 --- !u!43 &1100561150
 Mesh:
@@ -8897,6 +8912,7 @@ MonoBehaviour:
   tankTag: Enemy
   maxHealth: 100
   firePowerMultiplier: 0.5
+  scoreValue: 100
   tankMaterial: {fileID: 2100000, guid: 65733a968efb3314f888fb20ac4fcf9c, type: 2}
 --- !u!4 &1306784559 stripped
 Transform:
@@ -9456,6 +9472,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1408306694}
   - component: {fileID: 1408306695}
+  - component: {fileID: 1408306696}
   m_Layer: 5
   m_Name: UI_GameOver
   m_TagString: Untagged
@@ -9501,6 +9518,18 @@ MonoBehaviour:
   m_PivotReferenceSize: 0
   m_Pivot: 0
   m_WorldSpaceCollider: {fileID: 0}
+--- !u!114 &1408306696
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1408306693}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a1ec298d8091b943a50e44fbf7c2130, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::GameOver
 --- !u!43 &1411911427
 Mesh:
   m_ObjectHideFlags: 0
@@ -12988,8 +13017,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::UIManager
   HUD: {fileID: 398268402}
-  pause: {fileID: 435433060}
-  gameOver: {fileID: 1408306695}
+  pause: {fileID: 435433058}
+  gameOver: {fileID: 1408306693}
 --- !u!4 &1822741250
 Transform:
   m_ObjectHideFlags: 0
@@ -15712,6 +15741,7 @@ SceneRoots:
   - {fileID: 1623990141}
   - {fileID: 496078002}
   - {fileID: 695392838}
+  - {fileID: 788780895}
   - {fileID: 841658303}
   - {fileID: 1081946029}
   - {fileID: 448226559}

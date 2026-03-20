@@ -1,5 +1,8 @@
 <ui:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
-    <ui:VisualElement style="flex-grow: 1; background-color: rgba(0, 0, 0, 0.75); -unity-text-align: middle-left; justify-content: center;">
+    <Style src="project://database/Assets/UI%20Toolkit/MainMenu/styles.uss?fileID=7433441132597879392&amp;guid=78d00c2dd0dbbe7488efd1ebe5d98eed&amp;type=3#styles" />
+    <ui:VisualElement style="flex-grow: 1; background-color: rgba(0, 0, 0, 0.75); -unity-text-align: middle-left; justify-content: center; align-items: center;">
         <ui:Label text="PAUSE" name="pause-label" style="color: rgb(255, 255, 255); font-size: 66px; -unity-text-align: middle-center; align-self: auto;" />
+        <ui:Button text="Restart" name="restart-btn" class="menu-item menu-button" />
+        <ui:Button text="Main Menu" name="MainMenu-btn" class="menu-item menu-button" />
     </ui:VisualElement>
 </ui:UXML>

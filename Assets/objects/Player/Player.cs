@@ -8,7 +8,9 @@ public class Player : MonoBehaviour
     
     [Header("Tank Settings")]
     public GameObject tankPrefab;
+    public float respawnTime = 1f;
     private GameObject currentTank;
+
     
     // Tank interfaces
     private IDrivable currentDrivable;
@@ -18,13 +20,21 @@ public class Player : MonoBehaviour
     // Input handlers
     [SerializeField] private PlayerInputHandler inputHandler;
     [SerializeField] private PlayerTurretInputs turretInputs;
+
     void OnEnable()
     {
         PlayerEvents.OnPlayerDied.Subscribe(OnTankDestroyed);
+        PlayerEvents.OnPlayerScored.Subscribe(PlayerScored);
     }
     void OnDisable()
     {
         PlayerEvents.OnPlayerDied.Unsubscribe(OnTankDestroyed);
+        PlayerEvents.OnPlayerScored.Unsubscribe(PlayerScored);
+    }
+    void PlayerScored(int points)
+    {
+        score += points;
+        GameEvents.OnScoreUpdate.Invoke(score);
     }
 
     private void Start()
@@ -36,7 +46,7 @@ public class Player : MonoBehaviour
             SpawnNewTank();
         }
     }
-
+    
     private void SpawnNewTank()
     {
         currentTank = Instantiate(tankPrefab, transform.position, transform.rotation);
@@ -68,12 +78,26 @@ public class Player : MonoBehaviour
         
         if (lives > 0)
         {
-            SpawnNewTank();
+           StartCoroutine(RespawnTank());
         }
         else
         {
             Debug.Log("Game Over");
             GameEvents.OnGameOver.Invoke();
+            GameEvents.OnFinalScore.Invoke(score);
+            // StartCoroutine(SetFinalScore());
         }
+    }
+    // System.Collections.IEnumerator SetFinalScore()
+    // {
+    //     yield return new WaitForSeconds(1f);
+    //     GameEvents.OnFinalScore.Invoke(score);        
+    // }
+    System.Collections.IEnumerator RespawnTank()
+    {
+        yield return new WaitForSeconds(1f);
+        SpawnNewTank();
+        GameEvents.OnHealthUpdate.Invoke(1f);
+        GameEvents.OnShieldUpdate.Invoke(1f);
     }
 }

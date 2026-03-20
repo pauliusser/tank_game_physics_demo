@@ -3,6 +3,8 @@ public static class GameEvents
     public static Event OnGameStart = new Event();
     public static Event OnPauseToggled = new Event();
     public static Event OnGameOver = new Event();
+    public static Event<int> OnFinalScore = new Event<int>();
+    public static Event OnEnterMainMenu = new Event();
 
 
     public static Event OnRefreshHUD = new Event();

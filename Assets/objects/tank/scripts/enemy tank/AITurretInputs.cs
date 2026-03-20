@@ -116,7 +116,7 @@ public class AITurretController : MonoBehaviour
             
             // SphereCast from gun barrel to target
             RaycastHit hitInfo;
-            if (Physics.SphereCast(gunBarrel.transform.position, projectileRadius, direction.normalized, out hitInfo, distance, obstacleMask))
+            if (Physics.SphereCast(turret.transform.position, projectileRadius, direction.normalized, out hitInfo, distance, obstacleMask))
             {
                 // Hit something - check if it's the target or an obstacle
                 if (hitInfo.transform == candidate)

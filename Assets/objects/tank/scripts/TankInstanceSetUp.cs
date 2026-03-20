@@ -7,6 +7,7 @@ public class TankInstanceSetUp : MonoBehaviour
     public string tankTag;
     public int maxHealth = 100;
     public float firePowerMultiplier = 1f;
+    public int scoreValue = 0;
     public Material tankMaterial;
     private TankRefs refs;
     private GameObject[] meshColliders;
@@ -30,7 +31,10 @@ public class TankInstanceSetUp : MonoBehaviour
         tankInstance.GetComponent<TankStats>().maxHealth = maxHealth;
         refs = tankInstance.GetComponent<TankRefs>();
         refs.turret.GetComponent<TankTurret>().damageMultiplier = firePowerMultiplier;
-        tankInstance.GetComponent<TankDeathHandler>().tankTag = tankTag;
+        TankDeathHandler deathHandler = tankInstance.GetComponent<TankDeathHandler>();
+        deathHandler.tankTag = tankTag;
+        deathHandler.scoreValue = scoreValue;
+        
         meshColliders = refs.meshColliders;
         coloredPars = refs.coloredPars;
         SetLayer();

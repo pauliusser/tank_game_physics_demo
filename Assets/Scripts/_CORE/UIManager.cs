@@ -18,21 +18,22 @@ public class UIManager : MonoBehaviour
     [Header("References")]
 
     public GameObject HUD;
-    public UIDocument pause;
-    public UIDocument gameOver;
+    public GameObject pause;
+    public GameObject gameOver;
 
     
     public void ShowPause()
     {
-        pause.enabled = true;
+        pause.GetComponent<UIDocument>().enabled = true;
+        pause.GetComponent<PauseScreen>().InitializeUI();
     }
     public void HidePause()
     {
-        pause.enabled = false;
+        pause.GetComponent<UIDocument>().enabled = false;
     }
     public void ShowGameOver()
     {
-        gameOver.enabled = true;
+        gameOver.GetComponent<UIDocument>().enabled = true;
+        gameOver.GetComponent<GameOverScreen>().InitializeUI();
     }
-
 }

@@ -23,7 +23,11 @@ public class TankDamageHandler : MonoBehaviour, IDamagable
                 {
                     stats.Health += stats.shield;
                     stats.shield = 0;
-                    if (gameObject.tag == "Player") GameEvents.OnHealthUpdate.Invoke((float)stats.Health / stats.maxHealth);
+                    if (gameObject.tag == "Player")
+                    {
+                        GameEvents.OnHealthUpdate.Invoke((float)stats.Health / stats.maxHealth);
+                        GameEvents.OnShieldUpdate.Invoke(0f);
+                    }
                 }
                 else if (gameObject.tag == "Player") GameEvents.OnShieldUpdate.Invoke((float)stats.shield / stats.maxShield);
             }
