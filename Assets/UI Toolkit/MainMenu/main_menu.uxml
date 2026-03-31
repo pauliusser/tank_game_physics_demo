@@ -1,10 +1,12 @@
 <ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="False">
-    <Style src="project://database/Assets/UI%20Toolkit/MainMenu/styles.uss?fileID=7433441132597879392&amp;guid=78d00c2dd0dbbe7488efd1ebe5d98eed&amp;type=3#styles" />
+    <Style src="project://database/Assets/UI%20Toolkit/MainMenu/styles.uss?fileID=7433441132597879392&amp;guid=78d00c2dd0dbbe7488efd1ebe5d98eed&amp;type=3#styles"/>
     <ui:VisualElement style="flex-grow: 1; justify-content: center; align-items: center;">
-        <ui:VisualElement name="VisualElement" style="flex-grow: 1; align-items: center; justify-content: space-around; flex-direction: column; width: auto; height: 50px; min-height: 200px; max-height: 300px;">
-            <ui:Label text="Main Menu" name="menu_label" triple-click-selects-line="false" class="menu-label" />
-            <ui:Button text="Play&#10;" name="play_btn" class="menu-button" style="width: auto;" />
-            <ui:Button text="Exit" name="exit_btn" class="menu-button" />
-        </ui:VisualElement>
+        <ui:Image class="menu-bg-image" style="width: 100%; height: 100%; justify-content: center; align-items: center;">
+            <ui:VisualElement name="VisualElement" style="flex-grow: 1; align-items: center; justify-content: space-around; flex-direction: column; width: auto; height: 50px; min-height: 200px; max-height: 300px;">
+                <ui:Label text="DEMO" name="menu_label" triple-click-selects-line="true" class="menu-label"/>
+                <ui:Button text="Play&#10;" name="play_btn" class="menu-button" style="width: auto;"/>
+                <ui:Button text="Exit" name="exit_btn" class="menu-button"/>
+            </ui:VisualElement>
+        </ui:Image>
     </ui:VisualElement>
 </ui:UXML>

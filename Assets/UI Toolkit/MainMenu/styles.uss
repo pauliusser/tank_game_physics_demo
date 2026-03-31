@@ -40,3 +40,7 @@
     margin-bottom: 10px;
     margin-left: 10px;
 }
+
+.menu-bg-image {
+    background-image: url("project://database/Assets/UI Toolkit/MainMenu/background.png")
+}

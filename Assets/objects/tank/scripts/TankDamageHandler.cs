@@ -51,6 +51,7 @@ public class TankDamageHandler : MonoBehaviour, IDamagable
         {
             stateMachine.ChangeState(new DeathState());
             if (gameObject.tag == "Player") GameEvents.OnHealthUpdate.Invoke(0f);
+            else GameEvents.OnVictory.Invoke();
         }
     }
 }

@@ -5,6 +5,7 @@ public static class GameEvents
     public static Event OnGameOver = new Event();
     public static Event<int> OnFinalScore = new Event<int>();
     public static Event OnEnterMainMenu = new Event();
+    public static Event OnVictory = new Event();
 
 
     public static Event OnRefreshHUD = new Event();

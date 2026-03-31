@@ -25,7 +25,8 @@ public class GameManager : MonoBehaviour
         MainMenu,
         Playing,
         Paused,
-        GameOver
+        GameOver,
+        Victory
     }
 
     public bool isRestart = false;
@@ -37,6 +38,7 @@ public class GameManager : MonoBehaviour
         GameEvents.OnGameOver.Subscribe(GameOver);
         GameEvents.OnPauseToggled.Subscribe(TogglePause);
         GameEvents.OnEnterMainMenu.Subscribe(EnterMainMenu);
+        GameEvents.OnVictory.Subscribe(Victory);
     }
 
     private void OnDisable()
@@ -45,12 +47,14 @@ public class GameManager : MonoBehaviour
         GameEvents.OnGameOver.Unsubscribe(GameOver);
         GameEvents.OnPauseToggled.Unsubscribe(TogglePause);
         GameEvents.OnEnterMainMenu.Unsubscribe(EnterMainMenu);
+        GameEvents.OnVictory.Unsubscribe(Victory);
     }
 
     private void StartGame() => SetState(GameState.Playing);
     private void GameOver() => SetState(GameState.GameOver);
     private void TogglePause() => SetState(CurrentState == GameState.Playing ? GameState.Paused : GameState.Playing);
     private void EnterMainMenu() => SetState(GameState.MainMenu);
+    private void Victory() => SetState(GameState.Victory);
 
     private void SetState(GameState newState)
     {
@@ -81,7 +85,12 @@ public class GameManager : MonoBehaviour
                 UIManager.Instance.ShowPause();
                 break;
             case GameState.GameOver:
+                Time.timeScale = 0f;
                 UIManager.Instance.ShowGameOver();
+                break;
+            case GameState.Victory:
+                // Time.timeScale = 0f;
+                UIManager.Instance.ShowVictory();
                 break;
         }
     }
@@ -97,12 +106,14 @@ public class GameManager : MonoBehaviour
                 // optional cleanup
                 break;
             case GameState.Paused:
-                Debug.Log("pause state off");
                 Time.timeScale = 1f;
                 UIManager.Instance.HidePause();
                 break;
             case GameState.GameOver:
-                // optional cleanup
+                Time.timeScale = 1f;
+                break;
+            case GameState.Victory:
+                Time.timeScale = 1f;
                 break;
         }
     }

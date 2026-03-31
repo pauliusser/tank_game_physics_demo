@@ -10,6 +10,7 @@ public class Player : MonoBehaviour
     public GameObject tankPrefab;
     public float respawnTime = 1f;
     private GameObject currentTank;
+    private bool isVictory = false;
 
     
     // Tank interfaces
@@ -25,11 +26,13 @@ public class Player : MonoBehaviour
     {
         PlayerEvents.OnPlayerDied.Subscribe(OnTankDestroyed);
         PlayerEvents.OnPlayerScored.Subscribe(PlayerScored);
+        GameEvents.OnVictory.Subscribe(OnVictory);
     }
     void OnDisable()
     {
         PlayerEvents.OnPlayerDied.Unsubscribe(OnTankDestroyed);
         PlayerEvents.OnPlayerScored.Unsubscribe(PlayerScored);
+        GameEvents.OnVictory.Unsubscribe(OnVictory);
     }
     void PlayerScored(int points)
     {
@@ -85,19 +88,23 @@ public class Player : MonoBehaviour
             Debug.Log("Game Over");
             GameEvents.OnGameOver.Invoke();
             GameEvents.OnFinalScore.Invoke(score);
-            // StartCoroutine(SetFinalScore());
         }
     }
-    // System.Collections.IEnumerator SetFinalScore()
-    // {
-    //     yield return new WaitForSeconds(1f);
-    //     GameEvents.OnFinalScore.Invoke(score);        
-    // }
+    public void OnVictory()
+    {
+        isVictory = true;
+    }
     System.Collections.IEnumerator RespawnTank()
     {
         yield return new WaitForSeconds(1f);
         SpawnNewTank();
         GameEvents.OnHealthUpdate.Invoke(1f);
         GameEvents.OnShieldUpdate.Invoke(1f);
+    }
+    void LateUpdate()
+    {
+      if (!isVictory) return;
+        isVictory = false;
+        GameEvents.OnFinalScore.Invoke(score);
     }
 }

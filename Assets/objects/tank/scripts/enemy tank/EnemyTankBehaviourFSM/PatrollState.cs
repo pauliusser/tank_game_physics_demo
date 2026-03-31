@@ -6,33 +6,45 @@ public class PatrolState : IState<EnemyTankBehaviourFSM>
     private float distanceToWaypoint;
     private bool isPatrolInterupted = false;
     private bool isPatrolFinished = false;
+
     public IState<EnemyTankBehaviourFSM> DoState(EnemyTankBehaviourFSM machine)
     {
         if (machine.state != "patrol state") machine.state = "patrol state";
 
         DoPatrollBehaviour(machine);
 
-        if (EncounteredEnemy(machine))
+        // Same function as attack state, just with the smaller patrol detection radius
+        bool enemySpotted = machine.turretInputs.FindNearestTarget(
+            machine.targetLayerMask,
+            machine.obstacleMask,
+            machine.detectionRadius
+        );
+
+        if (enemySpotted)
         {
             isPatrolInterupted = true;
-            Reset(machine);  
-            return machine.attackState;  // new state
+            Reset(machine);
+            return machine.attackState;
         }
-        else if (isPatrolFinished) {
+        else if (isPatrolFinished)
+        {
             return new ReturnHomeState();
         }
         else
         {
-            return this; // stay in FooState
+            return this;
         }
     }
+
     void DoPatrollBehaviour(EnemyTankBehaviourFSM machine)
     {
-        distanceToWaypoint = Vector3.Magnitude(machine.waypoints[currentWaypointIndex].position - machine.tankBody.transform.position);
+        distanceToWaypoint = Vector3.Magnitude(
+            machine.waypoints[currentWaypointIndex].position - machine.tankBody.transform.position
+        );
 
         if (distanceToWaypoint < machine.arivalDistance)
         {
-            currentWaypointIndex ++;
+            currentWaypointIndex++;
             if (currentWaypointIndex >= machine.waypoints.Length)
             {
                 if (!isPatrolInterupted) isPatrolFinished = true;
@@ -40,52 +52,13 @@ public class PatrolState : IState<EnemyTankBehaviourFSM>
                 currentWaypointIndex = 0;
             }
         }
+
         if (machine.waypoints.Length > 0)
-        {
             machine.navController.navTarget = machine.waypoints[currentWaypointIndex];
-        }
     }
-    public bool EncounteredEnemy(EnemyTankBehaviourFSM machine)
-    {
-        Collider[] hits = new Collider[20];
-        int count = Physics.OverlapSphereNonAlloc
-        (
-            machine.tankTurret.transform.position,
-            machine.detectionRadius,
-            hits,
-            machine.targetLayerMask
-        );
 
-        if (count == 0)
-        {
-            return false;
-        }
-
-        Transform nearest = null;
-        float nearestDistSqr = float.MaxValue;
-        Vector3 turretPos = machine.tankTurret.transform.position;
-
-        for (int i = 0; i < count; i++)
-        {
-            Transform candidate = hits[i].transform;
-            Vector3 direction = candidate.position - turretPos;
-            float dist = direction.magnitude;
-            if (Physics.Raycast(turretPos, direction.normalized, out RaycastHit hit, dist, machine.obstacleMask))
-                continue;
-
-            float distSqr = direction.sqrMagnitude;
-            if (distSqr < nearestDistSqr)
-            {
-                nearestDistSqr = distSqr;
-                nearest = candidate;
-            }
-        }
-
-        return nearest != null;
-    }
     public void Reset(EnemyTankBehaviourFSM machine)
     {
-        // stop patrolling
         machine.navController.navTarget = null;
         machine.navController.StopMoving();
     }

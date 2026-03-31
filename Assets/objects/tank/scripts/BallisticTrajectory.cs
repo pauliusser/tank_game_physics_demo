@@ -39,6 +39,20 @@ public class BallisticTrajectory : MonoBehaviour
 
         points = new List<Vector3>();
     }
+    void OnEnable()
+    {
+        PlayerEvents.OnPlayerDied.Subscribe(OnPlayerDied);
+    }
+
+    void OnDisable()
+    {
+        PlayerEvents.OnPlayerDied.Unsubscribe(OnPlayerDied);
+    }
+
+    void OnPlayerDied()
+    {
+        line.positionCount = 0;
+    }
 
     void Update()
     {
